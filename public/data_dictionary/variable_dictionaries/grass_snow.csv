@@ -1,0 +1,5 @@
+variable_name,variable_description,months,variable_type
+grassSnowAvg,,"30,36,42,54",numeric
+grassSnowChildPresent,,"30,36,42,54",numeric
+grassSnowParentPresent,,"30,36,42,54",numeric
+grassSnowTotal,,"30,36,42,54",numeric
