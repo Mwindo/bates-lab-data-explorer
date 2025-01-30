@@ -1,0 +1,7 @@
+.listbox {
+  height: 390px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  border: 1px solid white;
+  border-radius: 5px;
+}

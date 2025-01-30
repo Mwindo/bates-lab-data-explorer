@@ -1,0 +1,3 @@
+variable_name,variable_description,months,variable_type
+tcid,The ID of the subject,,numeric
+site,The location at which the variable was measured,,numeric

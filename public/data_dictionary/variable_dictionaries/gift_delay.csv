@@ -1,0 +1,7 @@
+variable_name,variable_description,months,variable_type
+giftDelayLatency,,"30,36,42,54",numeric
+giftDelayLatencyToHandInBag,,"30,36,42,54",numeric
+giftDelayLatencyToOpenBag,,"30,36,42,54",numeric
+giftDelayLatencyToPullGiftFromBag,,"30,36,42,54",numeric
+giftDelayLatencyToTouchBag,,"30,36,42,54",numeric
+giftDelayScore,,"30,36,42,54",numeric

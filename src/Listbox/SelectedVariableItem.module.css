@@ -1,0 +1,21 @@
+.remove_button {
+  background-color: crimson;
+  border-radius: 5px;
+  border: 0px;
+  float: right;
+  height: 32px;
+  cursor: pointer;
+}
+
+.remove_button:hover {
+  background-color: brown;
+}
+
+.remove_button:active:hover {
+  background-color: red;
+}
+
+.remove_button:focus {
+  background-color: brown;
+  outline: solid 1px white;
+}
