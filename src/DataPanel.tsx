@@ -9,7 +9,11 @@ const tasksFileURL = `${
   import.meta.env.BASE_URL
 }data_dictionary/task_dictionary.csv`;
 
-export function DataPanel({ dataframe }: { dataframe: DataFrame }) {
+export function DataPanel({
+  variablesDataframeFile,
+}: {
+  variablesDataframeFile: File;
+}) {
   const [tasksData, setTasksData] = useState<DataFrame | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [selectedTask, setSelectedTask] = useState<string>("");
@@ -37,7 +41,7 @@ export function DataPanel({ dataframe }: { dataframe: DataFrame }) {
         category={selectedCategory}
       ></TasksPanel>
       <VariablesPanel
-        variablesDataframe={dataframe}
+        variablesDataframeFile={variablesDataframeFile}
         tasksDataframe={tasksData}
         category={selectedCategory}
         task={selectedTask}

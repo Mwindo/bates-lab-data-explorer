@@ -21,12 +21,12 @@ const VARIABLE_METADATA_CSV_FILES = [
 // }
 
 export function VariablesPanel({
-  variablesDataframe,
+  variablesDataframeFile,
   tasksDataframe,
   category,
   task,
 }: {
-  variablesDataframe: DataFrame;
+  variablesDataframeFile: File;
   tasksDataframe: DataFrame;
   category: string;
   task: string;
@@ -155,9 +155,10 @@ export function VariablesPanel({
     loadVariableMetada();
   }, []);
 
-  const saveAsCSV = () => {
+  const saveAsCSV = async () => {
     // Create a new DataFrame that only includes the columns in selectedVariablesInQueue
     console.log(variablesInQueue);
+    const variablesDataframe = await dfd.readCSV(variablesDataframeFile);
     const filteredDf = variablesDataframe.loc({
       columns: variablesInQueue,
     });
@@ -320,7 +321,10 @@ export function VariablesPanel({
           >
             Remove All
           </button>
-          <button className="little_button" onClick={() => saveAsCSV()}>
+          <button
+            className="little_button"
+            onClick={async () => await saveAsCSV()}
+          >
             Save As CSV
           </button>
         </div>

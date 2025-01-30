@@ -1,12 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-import * as dfd from "danfojs/dist/danfojs-browser/src";
 import { DataPanel } from "./DataPanel";
-import { DataFrame } from "danfojs/dist/danfojs-base";
-import { VariablesPanel } from "./VariablesPanel";
 
 function App() {
-  const [batesLabData, setBatesLabData] = useState<DataFrame | null>(null);
+  const [variablesDataframeFile, setVariablesDataframeFile] =
+    useState<File | null>(null);
 
   const handleFileInput = () => {
     const fileInput = document.createElement("input");
@@ -17,7 +15,7 @@ function App() {
       const target = event.target;
       if (target && target.files && target.files.length > 0) {
         const file = target.files[0];
-        processCSV(file);
+        setVariablesDataframeFile(file);
       }
     });
 
@@ -25,18 +23,12 @@ function App() {
     fileInput.click();
   };
 
-  const processCSV = async (file: string) => {
-    const df = await dfd.readCSV(file);
-    console.log(df.head());
-    setBatesLabData(df);
-  };
-
   return (
     <>
-      <div style={{ justifyItems: "center" }}>
+      <div style={{ justifyItems: "center", backgroundColor: "#242424" }}>
         <h1>Bates Lab Data Explorer</h1>
       </div>
-      {!batesLabData ? (
+      {!variablesDataframeFile ? (
         <div style={{ justifyItems: "center" }}>
           <p>Welcome to the Bates Lab Data Explorer. To get started:</p>
           <ul>
@@ -53,7 +45,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <DataPanel dataframe={batesLabData}></DataPanel>
+        <DataPanel variablesDataframeFile={variablesDataframeFile}></DataPanel>
       )}
     </>
   );
