@@ -32,6 +32,12 @@ export function Listbox({
     }
   }, []);
 
+  useEffect(() => {
+    if (childArray.length === 0) {
+      setSelection([]);
+    }
+  }, [childArray]);
+
   const handleItemClick = (
     event: MouseEvent,
     clickedId: string,

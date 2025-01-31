@@ -1,5 +1,4 @@
 import styles from "./SelectedVariableItem.module.css";
-import generalStyles from "./General.module.css";
 
 export function SelectedVariableItem({
   text,
@@ -13,7 +12,13 @@ export function SelectedVariableItem({
   return (
     <div id={id}>
       {text}
-      <button className={styles.remove_button} onClick={() => onRemove(id)}>
+      <button
+        className={styles.remove_button}
+        onClick={(e) => {
+          e.stopPropagation();
+          onRemove(id);
+        }}
+      >
         Remove
       </button>
     </div>

@@ -4,6 +4,7 @@ import { VariablesPanel } from "./VariablesPanel";
 import { CategoriesPanel } from "./CategoriesPanel";
 import { useEffect, useState } from "react";
 import * as dfd from "danfojs/dist/danfojs-browser/src";
+import { LoadingPanel } from "./LoadingPanel";
 
 const tasksFileURL = `${
   import.meta.env.BASE_URL
@@ -26,7 +27,7 @@ export function DataPanel({
   }, []);
 
   if (!tasksData) {
-    return <>Loading</>;
+    return <LoadingPanel />;
   }
 
   return (

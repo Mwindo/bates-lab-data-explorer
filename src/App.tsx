@@ -24,8 +24,8 @@ function App() {
   };
 
   return (
-    <>
-      <div style={{ justifyItems: "center", backgroundColor: "#242424" }}>
+    <div style={{ backgroundColor: "#242424" }}>
+      <div style={{ justifyItems: "center" }}>
         <h1>Bates Lab Data Explorer</h1>
       </div>
       {!variablesDataframeFile ? (
@@ -47,7 +47,7 @@ function App() {
       ) : (
         <DataPanel variablesDataframeFile={variablesDataframeFile}></DataPanel>
       )}
-    </>
+    </div>
   );
 }
 

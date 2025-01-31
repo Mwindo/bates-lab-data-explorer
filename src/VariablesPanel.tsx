@@ -4,6 +4,7 @@ import { SelectableVariableItem } from "./Listbox/SelectableVariableItem";
 import { SelectedVariableItem } from "./Listbox/SelectedVariableItem";
 import * as dfd from "danfojs/dist/danfojs-browser/src";
 import { DataFrame } from "danfojs/dist/danfojs-base";
+import { LoadingPanel } from "./LoadingPanel";
 
 const VARIABLE_METADATA_DIRECTORY_URL = `${
   import.meta.env.BASE_URL
@@ -54,6 +55,8 @@ export function VariablesPanel({
   const [variablesMetadata, setVariablesMetadata] = useState<DataFrame | null>(
     null
   );
+
+  const [loadingMessage, setLoadingMessage] = useState<string>("");
 
   const getVariables = useCallback(() => {
     console.log("variablesMetadata", variablesMetadata);
@@ -156,19 +159,18 @@ export function VariablesPanel({
   }, []);
 
   const saveAsCSV = async () => {
+    setLoadingMessage("Gathering data. This could take several seconds.");
     // Create a new DataFrame that only includes the columns in selectedVariablesInQueue
-    console.log(variablesInQueue);
     const variablesDataframe = await dfd.readCSV(variablesDataframeFile);
     const filteredDf = variablesDataframe.loc({
       columns: variablesInQueue,
     });
-    filteredDf.print();
-
     // Trigger a CSV download using the filtered DataFrame
     dfd.toCSV(filteredDf, {
       fileName: "data.csv",
       download: true,
     });
+    setLoadingMessage("");
   };
 
   const getVariableDescription = (variableName: string) => {
@@ -181,7 +183,7 @@ export function VariablesPanel({
   };
 
   if (!variablesMetadata) {
-    return <></>;
+    return <LoadingPanel />;
   }
 
   return (
@@ -216,6 +218,7 @@ export function VariablesPanel({
                 ...new Set(variablesInQueue.concat(selectedVariables)),
               ])
             }
+            disabled={selectedVariables.length === 0}
           >
             Add Selected
           </button>
@@ -223,9 +226,15 @@ export function VariablesPanel({
             className="little_button"
             onClick={() =>
               // This does not work need to add existing
-              setVariablesInQueue(
-                getVariables().filter((x) => `${x}`.startsWith(filterString))
-              )
+              setVariablesInQueue([
+                ...new Set(
+                  variablesInQueue.concat(
+                    getVariables().filter((x) =>
+                      `${x}`.startsWith(filterString)
+                    )
+                  )
+                ),
+              ])
             }
           >
             Add All
@@ -293,9 +302,17 @@ export function VariablesPanel({
               key={x}
               text={`${x}`}
               id={`${x}`}
-              onRemove={(id) =>
-                setVariablesInQueue(variablesInQueue.filter((x) => x != id))
-              }
+              onRemove={(id) => {
+                console.log(id);
+                console.log(selectedVariablesInQueue);
+                console.log(
+                  selectedVariablesInQueue.filter((s) => s == `${x}`)
+                );
+                setVariablesInQueue(variablesInQueue.filter((x) => x != id));
+                setSelectedVariablesInQueue(
+                  selectedVariablesInQueue.filter((s) => s !== `${x}`)
+                );
+              }}
             ></SelectedVariableItem>
           ))}
         </Listbox>
@@ -305,30 +322,38 @@ export function VariablesPanel({
         >
           <button
             className="little_button"
-            onClick={() =>
+            onClick={() => {
               setVariablesInQueue(
                 variablesInQueue.filter(
                   (x) => !selectedVariablesInQueue.includes(x)
                 )
-              )
-            }
+              );
+              setSelectedVariablesInQueue([]);
+            }}
+            disabled={selectedVariablesInQueue.length === 0}
           >
             Remove Selected
           </button>
           <button
             className="little_button"
-            onClick={() => setVariablesInQueue([])}
+            onClick={() => {
+              setVariablesInQueue([]);
+              setSelectedVariablesInQueue([]);
+            }}
+            disabled={variablesInQueue.length === 0}
           >
             Remove All
           </button>
           <button
             className="little_button"
             onClick={async () => await saveAsCSV()}
+            disabled={variablesInQueue.length === 0}
           >
             Save As CSV
           </button>
         </div>
       </div>
+      {loadingMessage && <LoadingPanel message={loadingMessage} />}
     </div>
   );
 }
