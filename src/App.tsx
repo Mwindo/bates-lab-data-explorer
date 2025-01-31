@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <div style={{ backgroundColor: "#242424" }}>
+    <div>
       <div style={{ justifyItems: "center" }}>
         <h1>Bates Lab Data Explorer</h1>
       </div>
