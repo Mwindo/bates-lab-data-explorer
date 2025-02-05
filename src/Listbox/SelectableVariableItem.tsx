@@ -1,5 +1,5 @@
 import styles from "./SelectableVariableItem.module.css";
-import generalStyles from "./General.module.css";
+import listboxStyles from "./Listbox.module.css";
 
 export function SelectableVariableItem({
   isInQueue,
@@ -7,21 +7,23 @@ export function SelectableVariableItem({
   description,
   id,
   onAdd,
+  setModal,
 }: {
   isInQueue: boolean;
   name: string;
   description: string;
   id: string;
   onAdd: (id: string) => void;
+  setModal: (description: string) => void;
 }) {
   return (
     <div id={id}>
       <button
         onClick={(e) => {
           e.preventDefault();
-          window.alert(description);
+          setModal(`${name}: ${description || "No description"}`);
         }}
-        className={styles.info_button}
+        className={listboxStyles.info_button}
         title={description}
       >
         ?

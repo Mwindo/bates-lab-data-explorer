@@ -1,0 +1,6 @@
+variable_name,variable_description,months,variable_type
+fruitStroopParentPres,"Was the parent present? 0=no, 1=yes, 888=N/A, 999=missing","30,36,42,54",numeric
+fruitStroopChildPres,"Was the child present? 0=no, 1=yes, 888=N/A, 999=missing","30,36,42,54",numeric
+fruitStroopSmall,"The small fruit score, with a theoretical range of 0-2. Calculated as means of fruitStroopSmall_T1, fruitStroopSmall_T2, and fruitStroopSmall_T3.","30,36,42,54",numeric
+fruitStroopLarge,"The small fruit score, with a theoretical range of 0-2. Calculated as means of fruitStroopLarge_T1, fruitStroopLarge_T2, and fruitStroopLarge_T3.","30,36,42,54",numeric
+fruitStroopAvg,"The average of small and large fruit trials, with a theoretical range of 0-2. Calculated as mean of fruitStroopSmall and fruitStroopLarge.","30,36,42,54",numeric

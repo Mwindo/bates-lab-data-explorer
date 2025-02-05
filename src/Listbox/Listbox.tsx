@@ -27,16 +27,17 @@ export function Listbox({
   };
 
   useEffect(() => {
-    if (autoSelect) {
+    if (autoSelect && childArray.length) {
       setSelection([childArray[0].props.id]);
     }
   }, []);
 
   useEffect(() => {
-    if (childArray.length === 0) {
+    if (!childArray.length) {
       setSelection([]);
+      onSelect([]);
     }
-  }, [childArray]);
+  }, [children]);
 
   const handleItemClick = (
     event: MouseEvent,

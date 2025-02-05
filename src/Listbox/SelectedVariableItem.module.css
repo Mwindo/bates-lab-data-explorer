@@ -19,3 +19,8 @@
   background-color: brown;
   outline: solid 1px white;
 }
+
+.remove_button:disabled {
+  color: rgb(179, 179, 179);
+  font-weight: bold;
+}

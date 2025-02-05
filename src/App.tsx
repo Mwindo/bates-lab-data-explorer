@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./App.css";
 import { DataPanel } from "./DataPanel";
+import { DescriptionPanel } from "./DescriptionPanel";
 
 function App() {
   const [variablesDataframeFile, setVariablesDataframeFile] =
     useState<File | null>(null);
+
+  const [modalDescription, setModalDescription] = useState<string>("");
 
   const handleFileInput = () => {
     const fileInput = document.createElement("input");
@@ -45,7 +48,16 @@ function App() {
           </div>
         </div>
       ) : (
-        <DataPanel variablesDataframeFile={variablesDataframeFile}></DataPanel>
+        <DataPanel
+          variablesDataframeFile={variablesDataframeFile}
+          setModal={setModalDescription}
+        ></DataPanel>
+      )}
+      {modalDescription && (
+        <DescriptionPanel
+          description={modalDescription}
+          setModal={setModalDescription}
+        />
       )}
     </div>
   );

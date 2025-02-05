@@ -1,0 +1,6 @@
+variable_name,variable_description,months,variable_type
+snackDelayParentPres,"Was the parent present? 0=no, 1=yes, 888=N/A, 999=missing","30,36,42,54",numeric
+snackDelayChildPres,"Was the child present? 0=no, 1=yes, 888=N/A, 999=missing","30,36,42,54",numeric
+snackDelayAvg,"The mean of all delay scores. (Note that each trial has part one and part two.) Calculated as the mean of snackDelayTrial1Pt1, snackDelayTrial1Pt2, snackDelayTrial2Pt1, snackDelayTrial2Pt2, snackDelayTrial3Pt1, snackDelayTrial3Pt2, snackDelayTrial4Pt1, and snackDelayTrial4Pt2. Theoretical range: 1-5.","30,36,42,54",numeric
+snackDelayPt1Avg,"The mean of all part 1 delay scores across all trials. (Part one = the time until E touches the bell.) Calculated as the mean of snackDelayTrial1Pt1, snackDelayTrial2Pt1, snackDelayTrial3Pt1, and snackDelayTrial4Pt1. Theoretical range: 1-5.","30,36,42,54",numeric
+snackDelayPt2Avg,"The mean of all part 2 delay scores across all trials. (Part two = the time between E touching the bell and ringing the bell.) Calculated as the mean of snackDelayTrial1Pt2, snackDelayTrial2Pt2, snackDelayTrial3Pt2, and snackDelayTrial4Pt2. Theoretical range: 1-5.","30,36,42,54",numeric

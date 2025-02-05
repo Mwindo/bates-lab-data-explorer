@@ -29,24 +29,3 @@
   background-color: green;
   outline: solid 1px white;
 }
-
-.info_button {
-  width: 16px;
-  height: 16px;
-  background-color: #007bff; /* Choose any color you like */
-  color: #ffffff; /* Text color */
-  border: none;
-  border-radius: 50%; /* Makes it circular */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px; /* Adjust font size to fit inside */
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  float: left;
-}
-
-.info_button:hover {
-  background-color: #0056b3; /* Darker color on hover */
-}

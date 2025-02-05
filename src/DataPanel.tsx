@@ -12,8 +12,10 @@ const tasksFileURL = `${
 
 export function DataPanel({
   variablesDataframeFile,
+  setModal,
 }: {
   variablesDataframeFile: File;
+  setModal: (description: string) => void;
 }) {
   const [tasksData, setTasksData] = useState<DataFrame | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
@@ -40,12 +42,15 @@ export function DataPanel({
         tasksDataframe={tasksData}
         onSelect={setSelectedTask}
         category={selectedCategory}
+        setModal={setModal}
       ></TasksPanel>
       <VariablesPanel
         variablesDataframeFile={variablesDataframeFile}
         tasksDataframe={tasksData}
         category={selectedCategory}
         task={selectedTask}
+        lockedVariableNames={["tcid"]}
+        setModal={setModal}
       ></VariablesPanel>
     </div>
   );

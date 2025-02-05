@@ -5,3 +5,25 @@
   border: 1px solid white;
   border-radius: 5px;
 }
+
+.info_button {
+  width: 16px;
+  height: 16px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  float: left;
+  margin-right: 10px;
+}
+
+.info_button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}

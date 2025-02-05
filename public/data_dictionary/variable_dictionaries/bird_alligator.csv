@@ -1,10 +1,5 @@
 variable_name,variable_description,months,variable_type
 birdAlligatorChildPres,"Is another child present? 1=yes, 0=no","30,36,42,54",numeric
-birdAlligatorFrontalAlphaPower,,"30,36,42,54",numeric
-birdAlligatorFrontalAlphaPowerLog,,"30,36,42,54",numeric
-birdAlligatorFrontalAsymmetry,,"30,36,42,54",numeric
-birdAlligatorFrontalThetaPowerLog,,"30,36,42,54",numeric
-birdAlligatorFrontalThetaTF,,"30,36,42,54",numeric
 birdAlligatorGo,,"30,36,42,54",numeric
 birdAlligatorGoImputed,,"30,36,42,54",numeric
 birdAlligatorGoRuleSwitch,,"30,36,42,54",numeric
@@ -22,18 +17,3 @@ birdAlligatorNoGoTotal,,"30,36,42,54",numeric
 birdAlligatorParentPres,"Is parent present (possibly interfering) during task? 1=yes, 0=no","30,36,42,54",numeric
 birdAlligatorPassedGoPracticeTrials,"Did the child pass the GO trials? 1=yes, 0=no","30,36,42,54",numeric
 birdAlligatorPassedNoGoPracticeTrials,"Did the child pass the NO GO trials? 1=yes, 0=no","30,36,42,54",numeric
-birdAlligatorPosteriorAlphaPowerLog,,"30,36,42,54",numeric
-birdAlligator_N2_amplitudeDifference,,"30,36,42,54",numeric
-birdAlligator_N2_amplitudeDifferenceCentered,,"30,36,42,54",numeric
-birdAlligator_goN2_amplitude,,"30,36,42,54",numeric
-birdAlligator_goN2_amplitudeCentered,,"30,36,42,54",numeric
-birdAlligator_goN2_amplitudeMean,,,numeric
-birdAlligator_goN2_latency,,"30,36,42,54",numeric
-birdAlligator_goN2_latencyCentered,,"30,36,42,54",numeric
-birdAlligator_goN2_latencyMean,,,numeric
-birdAlligator_nogoN2_amplitude,,"30,36,42,54",numeric
-birdAlligator_nogoN2_amplitudeCentered,,"30,36,42,54",numeric
-birdAlligator_nogoN2_amplitudeMean,,,numeric
-birdAlligator_nogoN2_latency,,"30,36,42,54",numeric
-birdAlligator_nogoN2_latencyCentered,,"30,36,42,54",numeric
-birdAlligator_nogoN2_latencyMean,,,numeric

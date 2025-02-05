@@ -16,7 +16,7 @@ export function CategoriesPanel({
         allowMultiple={false}
         autoSelect={true}
       >
-        {["executive_function", "woah"].map((x) => (
+        {["executive_function", "testing"].map((x) => (
           <div key={x} id={x}>
             {x}
           </div>

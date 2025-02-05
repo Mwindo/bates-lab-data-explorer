@@ -1,15 +1,18 @@
 import { useCallback, useState } from "react";
 import Listbox from "./Listbox/Listbox";
 import { DataFrame } from "danfojs";
+import { TaskItem } from "./Listbox/TaskItem";
 
 export function TasksPanel({
   tasksDataframe,
   onSelect,
   category,
+  setModal,
 }: {
   tasksDataframe: DataFrame;
   onSelect: (task: string) => void;
   category: string;
+  setModal: (description: string) => void;
 }) {
   const [limitToSelectedCategory, setLimitToSelectedCategory] =
     useState<boolean>(false);
@@ -25,7 +28,7 @@ export function TasksPanel({
   }, [category, tasksDataframe, limitToSelectedCategory]);
 
   return (
-    <div style={{ width: "200px" }}>
+    <div style={{ width: "220px" }}>
       <Listbox
         label={"Tasks"}
         onSelect={(stuff) => onSelect(stuff[0])}
@@ -33,9 +36,13 @@ export function TasksPanel({
         autoSelect={true}
       >
         {getTasks().map((x) => (
-          <div key={x[0]} id={x[0]} title={x[2]}>
-            {x[0]}
-          </div>
+          <TaskItem
+            key={x[0]}
+            id={x[0]}
+            name={x[0]}
+            description={x[2]}
+            setModal={setModal}
+          />
         ))}
       </Listbox>
       <div

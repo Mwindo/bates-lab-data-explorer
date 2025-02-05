@@ -1,5 +1,5 @@
 variable_name,variable_description,months,variable_type
-grassSnowAvg,,"30,36,42,54",numeric
-grassSnowChildPresent,,"30,36,42,54",numeric
-grassSnowParentPresent,,"30,36,42,54",numeric
-grassSnowTotal,,"30,36,42,54",numeric
+grassSnowAvg,"The average score across all trials, with a theoretical range of 0-1. Computed by taking grassSnowTotal / grassSnowTotalTrialsPlayed.","30,36,42,54",numeric
+grassSnowChildPresent,"Was the child present? 0=no, 1=yes, 888=N/A, 999=missing","30,36,42,54",numeric
+grassSnowParentPresent,"Was the parent present? 0=no, 1=yes, 888=N/A, 999=missing","30,36,42,54",numeric
+grassSnowTotal,"The sum of all scores/trials, with a theoretical range of 0-14; 888=N/A, 999=missing","30,36,42,54",numeric

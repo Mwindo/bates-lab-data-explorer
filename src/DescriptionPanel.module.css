@@ -1,0 +1,48 @@
+.description_panel {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.6;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  overflow-y: scroll;
+}
+
+.description_text {
+  padding: 10px;
+  text-align: center;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #034489;
+  max-height: 500px;
+  overflow-y: scroll;
+  border-radius: 5px;
+}
+
+.close_description_button {
+  float: right;
+  cursor: pointer;
+
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #000;
+  opacity: 0.6;
+
+  margin-left: 1rem;
+}
+
+.close_description_button:hover,
+.close_description_button:focus {
+  opacity: 1;
+  color: gray;
+  outline: none;
+}

@@ -13,9 +13,16 @@ const VARIABLE_METADATA_DIRECTORY_URL = `${
 const VARIABLE_METADATA_CSV_FILES = [
   "all_tasks.csv",
   "bird_alligator.csv",
+  "door_opening.csv",
+  "fruit_stroop.csv",
   "gift_delay.csv",
   "grass_snow.csv",
+  "snack_delay.csv",
+  "sustained_attention.csv",
 ];
+
+const areSetsEqual = (a: any, b: any) =>
+  a.size === b.size && [...a].every((value) => b.has(value));
 
 // const getVariables(category: string, task: string) {
 
@@ -26,12 +33,17 @@ export function VariablesPanel({
   tasksDataframe,
   category,
   task,
+  setModal,
+  lockedVariableNames,
 }: {
   variablesDataframeFile: File;
   tasksDataframe: DataFrame;
   category: string;
   task: string;
+  setModal: (description: string) => void;
+  lockedVariableNames?: string[];
 }) {
+  console.log("task", task);
   const getCategoryForTask = (task: string) => {
     const result = (tasksDataframe.loc({
       rows: tasksDataframe["task"].eq(task),
@@ -46,7 +58,9 @@ export function VariablesPanel({
     useState<boolean>(false);
 
   const [selectedVariables, setSelectedVariables] = useState<string[]>([]);
-  const [variablesInQueue, setVariablesInQueue] = useState<string[]>([]);
+  const [variablesInQueue, setVariablesInQueue] = useState<string[]>(
+    lockedVariableNames || []
+  );
   const [selectedVariablesInQueue, setSelectedVariablesInQueue] = useState<
     string[]
   >([]);
@@ -60,10 +74,10 @@ export function VariablesPanel({
 
   const getVariables = useCallback(() => {
     console.log("variablesMetadata", variablesMetadata);
-    if (task && limitToSelectedTask) {
+    if (limitToSelectedTask) {
       const result = variablesMetadata.loc({
         rows: variablesMetadata["task"]
-          .eq(task)
+          .eq(task || "")
           .or(variablesMetadata["category"].eq("all")),
         columns: ["variable_name"],
       });
@@ -161,15 +175,21 @@ export function VariablesPanel({
   const saveAsCSV = async () => {
     setLoadingMessage("Gathering data. This could take several seconds.");
     // Create a new DataFrame that only includes the columns in selectedVariablesInQueue
-    const variablesDataframe = await dfd.readCSV(variablesDataframeFile);
-    const filteredDf = variablesDataframe.loc({
-      columns: variablesInQueue,
-    });
-    // Trigger a CSV download using the filtered DataFrame
-    dfd.toCSV(filteredDf, {
-      fileName: "data.csv",
-      download: true,
-    });
+    try {
+      const variablesDataframe = await dfd.readCSV(variablesDataframeFile);
+      const filteredDf = variablesDataframe.loc({
+        columns: variablesInQueue,
+      });
+      // Trigger a CSV download using the filtered DataFrame
+      dfd.toCSV(filteredDf, {
+        fileName: "data.csv",
+        download: true,
+      });
+    } catch {
+      alert(
+        "There was an error saving the CSV. Are you sure you loaded the correct file? Refresh and try again."
+      );
+    }
     setLoadingMessage("");
   };
 
@@ -188,10 +208,12 @@ export function VariablesPanel({
 
   return (
     <div style={{ display: "flex" }}>
-      <div style={{ width: "500px" }}>
+      <div style={{ width: "490px" }}>
         <Listbox label="Variables" onSelect={setSelectedVariables}>
           {getVariables()
-            .filter((x) => `${x}`.startsWith(filterString))
+            .filter((x) =>
+              `${x}`.toLowerCase().includes(filterString.toLowerCase())
+            )
             .map((x) => (
               <SelectableVariableItem
                 key={x}
@@ -199,6 +221,7 @@ export function VariablesPanel({
                 description={getVariableDescription(x)}
                 name={`${x}`}
                 id={`${x}`}
+                setModal={setModal}
                 onAdd={(id) =>
                   setVariablesInQueue([
                     ...new Set(variablesInQueue.concat([id])),
@@ -230,7 +253,7 @@ export function VariablesPanel({
                 ...new Set(
                   variablesInQueue.concat(
                     getVariables().filter((x) =>
-                      `${x}`.startsWith(filterString)
+                      `${x}`.toLowerCase().includes(filterString.toLowerCase())
                     )
                   )
                 ),
@@ -242,6 +265,7 @@ export function VariablesPanel({
           <span>
             <label htmlFor="filter">Filter:</label>
             <input
+              className="textbox"
               id="filter"
               onChange={(e) => setFilterString(e.target.value)}
             ></input>
@@ -292,7 +316,7 @@ export function VariablesPanel({
           </span>
         </div>
       </div>
-      <div style={{ width: "500px" }}>
+      <div style={{ width: "490px" }}>
         <Listbox
           label="Selected Variables"
           onSelect={setSelectedVariablesInQueue}
@@ -302,12 +326,8 @@ export function VariablesPanel({
               key={x}
               text={`${x}`}
               id={`${x}`}
+              locked={lockedVariableNames?.includes(x)}
               onRemove={(id) => {
-                console.log(id);
-                console.log(selectedVariablesInQueue);
-                console.log(
-                  selectedVariablesInQueue.filter((s) => s == `${x}`)
-                );
                 setVariablesInQueue(variablesInQueue.filter((x) => x != id));
                 setSelectedVariablesInQueue(
                   selectedVariablesInQueue.filter((s) => s !== `${x}`)
@@ -325,29 +345,43 @@ export function VariablesPanel({
             onClick={() => {
               setVariablesInQueue(
                 variablesInQueue.filter(
-                  (x) => !selectedVariablesInQueue.includes(x)
+                  (x) =>
+                    !selectedVariablesInQueue.includes(x) ||
+                    lockedVariableNames?.includes(x)
                 )
               );
               setSelectedVariablesInQueue([]);
             }}
-            disabled={selectedVariablesInQueue.length === 0}
+            disabled={
+              selectedVariablesInQueue.length === 0 ||
+              areSetsEqual(
+                new Set(selectedVariablesInQueue),
+                new Set(lockedVariableNames)
+              )
+            }
           >
             Remove Selected
           </button>
           <button
             className="little_button"
             onClick={() => {
-              setVariablesInQueue([]);
+              setVariablesInQueue(lockedVariableNames || []);
               setSelectedVariablesInQueue([]);
             }}
-            disabled={variablesInQueue.length === 0}
+            disabled={
+              variablesInQueue.length ===
+              (lockedVariableNames ? lockedVariableNames.length : 0)
+            }
           >
             Remove All
           </button>
           <button
             className="little_button"
             onClick={async () => await saveAsCSV()}
-            disabled={variablesInQueue.length === 0}
+            disabled={
+              variablesInQueue.length ===
+              (lockedVariableNames ? lockedVariableNames.length : 0)
+            }
           >
             Save As CSV
           </button>
