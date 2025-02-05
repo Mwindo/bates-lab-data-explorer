@@ -103,4 +103,5 @@ button:disabled {
   height: 2rem;
   font-size: 1rem;
   margin-left: 10px;
+  background-color: #1a1a1a;
 }
