@@ -76,7 +76,9 @@ export function Listbox({
   return (
     <>
       <div style={{ display: "block" }}>
-        <h2>{label + ` (${childArray.length})`}</h2>
+        <h2 style={{ textWrap: "nowrap" }}>
+          {label + ` (${childArray.length})`}
+        </h2>
         <div className={classes.listbox}>
           {childArray.map((child, index) => {
             const childId = child.props.id;

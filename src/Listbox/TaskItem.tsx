@@ -12,7 +12,12 @@ export function TaskItem({
   setModal: (description: string) => void;
 }) {
   return (
-    <div id={id}>
+    <div
+      id={id}
+      style={{
+        textWrap: "nowrap",
+      }}
+    >
       <button
         onClick={(e) => {
           e.preventDefault();
@@ -23,7 +28,7 @@ export function TaskItem({
       >
         ?
       </button>
-      {name}
+      <div className={listboxStyles.listbox_text}>{name}</div>
     </div>
   );
 }

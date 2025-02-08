@@ -1,5 +1,6 @@
 import { DataFrame } from "danfojs";
 import Listbox from "./Listbox/Listbox";
+import dataPanelStyles from "./DataPanel.module.css";
 
 export function CategoriesPanel({
   tasksDataframe,
@@ -9,7 +10,7 @@ export function CategoriesPanel({
   onSelect: (category: string) => void;
 }) {
   return (
-    <div style={{ width: "200px" }}>
+    <div className={dataPanelStyles.categories_panel}>
       <Listbox
         label={"Categories"}
         onSelect={(stuff) => onSelect(stuff[0])}

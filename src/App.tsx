@@ -32,7 +32,7 @@ function App() {
         <h1>Bates Lab Data Explorer</h1>
       </div>
       {!variablesDataframeFile ? (
-        <div style={{ justifyItems: "center" }}>
+        <div style={{ justifyItems: "center", padding: "10px" }}>
           <p>Welcome to the Bates Lab Data Explorer. To get started:</p>
           <ul>
             <li>Log into the Bates Lab server</li>

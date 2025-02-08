@@ -33,25 +33,32 @@ export function DataPanel({
   }
 
   return (
-    <div style={{ display: "flex" }}>
-      <CategoriesPanel
-        tasksDataframe={tasksData}
-        onSelect={setSelectedCategory}
-      ></CategoriesPanel>
-      <TasksPanel
-        tasksDataframe={tasksData}
-        onSelect={setSelectedTask}
-        category={selectedCategory}
-        setModal={setModal}
-      ></TasksPanel>
-      <VariablesPanel
-        variablesDataframeFile={variablesDataframeFile}
-        tasksDataframe={tasksData}
-        category={selectedCategory}
-        task={selectedTask}
-        lockedVariableNames={["tcid"]}
-        setModal={setModal}
-      ></VariablesPanel>
+    <div style={{ display: "flex", gap: "1rem", overflow: "scroll" }}>
+      <div>
+        <CategoriesPanel
+          tasksDataframe={tasksData}
+          onSelect={setSelectedCategory}
+        />
+      </div>
+      <div>
+        <TasksPanel
+          tasksDataframe={tasksData}
+          onSelect={setSelectedTask}
+          category={selectedCategory}
+          setModal={setModal}
+        />
+      </div>
+      {/* Ensure this flex item can shrink */}
+      <div style={{ flex: "1 1 0", minWidth: 0 }}>
+        <VariablesPanel
+          variablesDataframeFile={variablesDataframeFile}
+          tasksDataframe={tasksData}
+          category={selectedCategory}
+          task={selectedTask}
+          lockedVariableNames={["tcid"]}
+          setModal={setModal}
+        />
+      </div>
     </div>
   );
 }

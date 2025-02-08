@@ -5,6 +5,7 @@ import { SelectedVariableItem } from "./Listbox/SelectedVariableItem";
 import * as dfd from "danfojs/dist/danfojs-browser/src";
 import { DataFrame } from "danfojs/dist/danfojs-base";
 import { LoadingPanel } from "./LoadingPanel";
+import dataPanelStyles from "./DataPanel.module.css";
 
 const VARIABLE_METADATA_DIRECTORY_URL = `${
   import.meta.env.BASE_URL
@@ -207,8 +208,8 @@ export function VariablesPanel({
   }
 
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ width: "490px" }}>
+    <div style={{ display: "flex", gap: "1rem" }}>
+      <div className={dataPanelStyles.variable_panel}>
         <Listbox label="Variables" onSelect={setSelectedVariables}>
           {getVariables()
             .filter((x) =>
@@ -316,7 +317,7 @@ export function VariablesPanel({
           </span>
         </div>
       </div>
-      <div style={{ width: "490px" }}>
+      <div className={dataPanelStyles.variable_panel}>
         <Listbox
           label="Selected Variables"
           onSelect={setSelectedVariablesInQueue}

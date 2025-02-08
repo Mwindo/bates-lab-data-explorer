@@ -1,0 +1,12 @@
+.categories_panel {
+  min-width: 100px;
+}
+
+.tasks_panel {
+  min-width: 100px;
+}
+
+.variable_panel {
+  width: 50%;
+  min-width: 220px;
+}

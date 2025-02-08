@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import Listbox from "./Listbox/Listbox";
 import { DataFrame } from "danfojs";
 import { TaskItem } from "./Listbox/TaskItem";
+import dataPanelStyles from "./DataPanel.module.css";
 
 export function TasksPanel({
   tasksDataframe,
@@ -28,7 +29,7 @@ export function TasksPanel({
   }, [category, tasksDataframe, limitToSelectedCategory]);
 
   return (
-    <div style={{ width: "220px" }}>
+    <div className={dataPanelStyles.tasks_panel}>
       <Listbox
         label={"Tasks"}
         onSelect={(stuff) => onSelect(stuff[0])}

@@ -17,7 +17,7 @@ export function SelectableVariableItem({
   setModal: (description: string) => void;
 }) {
   return (
-    <div id={id}>
+    <div id={id} className={listboxStyles.listbox_text_container}>
       <button
         onClick={(e) => {
           e.preventDefault();
@@ -28,7 +28,7 @@ export function SelectableVariableItem({
       >
         ?
       </button>
-      {name}
+      <div className={listboxStyles.listbox_text}>{name}</div>
       <button
         className={
           isInQueue ? `${styles.added_button}` : `${styles.add_button}`

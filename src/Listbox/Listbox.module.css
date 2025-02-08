@@ -27,3 +27,18 @@
 .info_button:hover {
   background-color: #0056b3; /* Darker color on hover */
 }
+
+.listbox_text {
+  flex: 1 1 auto; /* Fill all remaining space between the two buttons */
+  overflow: hidden; /* Prevent text from overflowing into button 2 */
+  text-overflow: ellipsis;
+  white-space: nowrap; /* No line wrapping */
+}
+
+.listbox_text_container {
+  display: flex; /* Use flexbox */
+  flex-wrap: nowrap; /* Prevent wrapping onto new lines */
+  align-items: center; /* Vertically center items (optional) */
+  width: 100%; /* Or a fixed width if you prefer */
+  white-space: nowrap; /* Keep everything on a single line */
+}
