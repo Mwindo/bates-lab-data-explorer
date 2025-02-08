@@ -104,4 +104,5 @@ button:disabled {
   font-size: 1rem;
   margin-left: 10px;
   background-color: #1a1a1a;
+  color: white;
 }
