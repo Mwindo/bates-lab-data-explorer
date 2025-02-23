@@ -19,11 +19,10 @@ export function DataPanel({
 }) {
   const [tasksData, setTasksData] = useState<DataFrame | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
-  const [selectedTask, setSelectedTask] = useState<string>("");
+  const [selectedTasks, setSelectedTasks] = useState<string[]>([]);
 
   useEffect(() => {
     dfd.readCSV(tasksFileURL).then((x) => {
-      console.log("Task Dictionary:", x.head());
       setTasksData(x);
     });
   }, []);
@@ -43,7 +42,7 @@ export function DataPanel({
       <div>
         <TasksPanel
           tasksDataframe={tasksData}
-          onSelect={setSelectedTask}
+          onSelect={setSelectedTasks}
           category={selectedCategory}
           setModal={setModal}
         />
@@ -54,7 +53,7 @@ export function DataPanel({
           variablesDataframeFile={variablesDataframeFile}
           tasksDataframe={tasksData}
           category={selectedCategory}
-          task={selectedTask}
+          tasks={selectedTasks}
           lockedVariableNames={["tcid"]}
           setModal={setModal}
         />

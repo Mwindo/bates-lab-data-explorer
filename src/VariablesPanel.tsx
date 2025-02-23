@@ -33,18 +33,17 @@ export function VariablesPanel({
   variablesDataframeFile,
   tasksDataframe,
   category,
-  task,
+  tasks,
   setModal,
   lockedVariableNames,
 }: {
   variablesDataframeFile: File;
   tasksDataframe: DataFrame;
   category: string;
-  task: string;
+  tasks: string[];
   setModal: (description: string) => void;
   lockedVariableNames?: string[];
 }) {
-  console.log("task", task);
   const getCategoryForTask = (task: string) => {
     const result = (tasksDataframe.loc({
       rows: tasksDataframe["task"].eq(task),
@@ -52,11 +51,6 @@ export function VariablesPanel({
     }).values[0] || ["all"]) as string[];
     return result[0];
   };
-
-  const [limitToSelectedCategory, setLimitToSelectedCategory] =
-    useState<boolean>(false);
-  const [limitToSelectedTask, setLimitToSelectedTask] =
-    useState<boolean>(false);
 
   const [selectedVariables, setSelectedVariables] = useState<string[]>([]);
   const [variablesInQueue, setVariablesInQueue] = useState<string[]>(
@@ -74,36 +68,17 @@ export function VariablesPanel({
   const [loadingMessage, setLoadingMessage] = useState<string>("");
 
   const getVariables = useCallback(() => {
-    console.log("variablesMetadata", variablesMetadata);
-    if (limitToSelectedTask) {
+    if (tasks && tasks.length) {
       const result = variablesMetadata.loc({
-        rows: variablesMetadata["task"]
-          .eq(task || "")
-          .or(variablesMetadata["category"].eq("all")),
+        rows: variablesMetadata["task"].values.map((x) =>
+          [...tasks, "all_tasks"].includes(x)
+        ),
         columns: ["variable_name"],
       });
-      console.log("result", result.getColumnData);
-      return result.getColumnData[0] as string[];
-    }
-    if (category && limitToSelectedCategory) {
-      const result = variablesMetadata.loc({
-        rows: variablesMetadata["category"]
-          .eq(category)
-          .or(variablesMetadata["category"].eq("all")),
-        columns: ["variable_name"],
-      });
-
-      console.log("result", result.getColumnData);
       return result.getColumnData[0] as string[];
     }
     return variablesMetadata?.getColumnData[0] as string[];
-  }, [
-    category,
-    task,
-    limitToSelectedTask,
-    limitToSelectedCategory,
-    variablesMetadata,
-  ]);
+  }, [category, tasks, variablesMetadata]);
 
   function explodeByMonths(df) {
     // Collect new rows in plain JS objects
@@ -113,7 +88,6 @@ export function VariablesPanel({
     for (let i = 0; i < df.shape[0]; i++) {
       // Convert that row to an object for easy manipulation
       const rowObj = dfd.toJSON(df.iloc({ rows: [i] }))[0];
-      console.log(rowObj);
 
       // If months is present and not null
       if (rowObj.months) {
@@ -163,7 +137,6 @@ export function VariablesPanel({
           dfList: dataFrames,
           axis: 0,
         }) as DataFrame;
-        console.log("Variables Dictionary Merged:", mergedDF.head());
         setVariablesMetadata(mergedDF);
       })
       .catch((err) => console.error("Error reading variable CSVs", err));
@@ -249,7 +222,6 @@ export function VariablesPanel({
           <button
             className="little_button"
             onClick={() =>
-              // This does not work need to add existing
               setVariablesInQueue([
                 ...new Set(
                   variablesInQueue.concat(
@@ -270,50 +242,6 @@ export function VariablesPanel({
               id="filter"
               onChange={(e) => setFilterString(e.target.value)}
             ></input>
-          </span>
-          <span>
-            <input
-              type="radio"
-              id="variables-show-all"
-              name="variables-filter"
-              defaultChecked
-              value="all"
-              onClick={() => {
-                setLimitToSelectedCategory(false);
-                setLimitToSelectedTask(false);
-              }}
-            />
-            <label htmlFor="variables-show-all">Show all</label>
-          </span>
-          <span>
-            <input
-              type="radio"
-              id="variables-filter-to-category"
-              name="variables-filter"
-              value="category"
-              onClick={() => {
-                setLimitToSelectedCategory(true);
-                setLimitToSelectedTask(false);
-              }}
-            />
-            <label htmlFor="variables-filter-to-category">
-              Filter by selected category
-            </label>
-          </span>
-          <span>
-            <input
-              type="radio"
-              id="variables-filter-to-task"
-              name="variables-filter"
-              value="task"
-              onClick={() => {
-                setLimitToSelectedTask(true);
-                setLimitToSelectedCategory(false);
-              }}
-            />
-            <label htmlFor="variables-filter-to-task">
-              Filter by selected task
-            </label>
           </span>
         </div>
       </div>

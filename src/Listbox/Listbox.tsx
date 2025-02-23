@@ -8,12 +8,14 @@ export function Listbox({
   onSelect,
   allowMultiple = true,
   autoSelect = false,
+  selected,
 }: {
   children: ReactNode;
   label: string;
   onSelect: (stuff: any) => void;
   allowMultiple?: boolean;
   autoSelect?: boolean;
+  selected?: string[];
 }) {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [lastClickedIndex, setLastClickedIndex] = useState<number | null>(null);
@@ -36,8 +38,10 @@ export function Listbox({
     if (!childArray.length) {
       setSelection([]);
       onSelect([]);
+    } else if (selected) {
+      setSelectedIds(selected);
     }
-  }, [children]);
+  }, [children, selected]);
 
   const handleItemClick = (
     event: MouseEvent,

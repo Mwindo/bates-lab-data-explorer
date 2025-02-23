@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import "./App.css";
 import { DataPanel } from "./DataPanel";
 import { DescriptionPanel } from "./DescriptionPanel";
+import { Header } from "./Header";
 
 function App() {
   const [variablesDataframeFile, setVariablesDataframeFile] =
     useState<File | null>(null);
 
-  const [modalDescription, setModalDescription] = useState<string>("");
+  const [modalContent, setModalContent] = useState<string | ReactNode>("");
 
   const handleFileInput = () => {
     const fileInput = document.createElement("input");
@@ -28,9 +29,7 @@ function App() {
 
   return (
     <div style={{ backgroundColor: "#242424" }}>
-      <div style={{ justifyItems: "center" }}>
-        <h1>Bates Lab Data Explorer</h1>
-      </div>
+      <Header setModal={setModalContent} />
       {!variablesDataframeFile ? (
         <div style={{ justifyItems: "center", padding: "10px" }}>
           <p>Welcome to the Bates Lab Data Explorer. To get started:</p>
@@ -50,13 +49,13 @@ function App() {
       ) : (
         <DataPanel
           variablesDataframeFile={variablesDataframeFile}
-          setModal={setModalDescription}
+          setModal={setModalContent}
         ></DataPanel>
       )}
-      {modalDescription && (
+      {modalContent && (
         <DescriptionPanel
-          description={modalDescription}
-          setModal={setModalDescription}
+          description={modalContent}
+          setModal={setModalContent}
         />
       )}
     </div>

@@ -11,12 +11,14 @@ export function TasksPanel({
   setModal,
 }: {
   tasksDataframe: DataFrame;
-  onSelect: (task: string) => void;
+  onSelect: (tasks: string[]) => void;
   category: string;
   setModal: (description: string) => void;
 }) {
   const [limitToSelectedCategory, setLimitToSelectedCategory] =
     useState<boolean>(false);
+
+  const [selectedTasks, setSelectedTasks] = useState<string[]>([]);
 
   const getTasks = useCallback(() => {
     if (category && limitToSelectedCategory) {
@@ -28,13 +30,20 @@ export function TasksPanel({
     return tasksDataframe.values as unknown as string[];
   }, [category, tasksDataframe, limitToSelectedCategory]);
 
+  const selectTasks = (tasks: string[]) => {
+    onSelect(tasks);
+    setSelectedTasks(tasks);
+  };
+
   return (
     <div className={dataPanelStyles.tasks_panel}>
       <Listbox
         label={"Tasks"}
-        onSelect={(stuff) => onSelect(stuff[0])}
-        allowMultiple={false}
+        onSelect={(tasks) => {
+          selectTasks(tasks);
+        }}
         autoSelect={true}
+        selected={selectedTasks}
       >
         {getTasks().map((x) => (
           <TaskItem
@@ -50,6 +59,12 @@ export function TasksPanel({
         id="tasks-options"
         style={{ display: "flex", flexDirection: "column", gap: "8px" }}
       >
+        <button
+          className="little_button"
+          onClick={() => selectTasks(tasksDataframe.values.map((x) => x[0]))}
+        >
+          Select All
+        </button>
         <span>
           <input
             type="radio"

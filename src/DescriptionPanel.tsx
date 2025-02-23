@@ -1,9 +1,10 @@
+import { ReactNode } from "react";
 import styles from "./DescriptionPanel.module.css";
 export function DescriptionPanel({
   description,
   setModal,
 }: {
-  description: string;
+  description: string | ReactNode;
   setModal: (description: string) => void;
 }) {
   return (

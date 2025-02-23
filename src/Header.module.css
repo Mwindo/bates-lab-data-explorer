@@ -1,0 +1,16 @@
+.last_updated {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  height: 40px;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
