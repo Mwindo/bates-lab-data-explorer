@@ -1,12 +1,11 @@
-import { DataFrame } from "danfojs";
 import Listbox from "./Listbox/Listbox";
 import dataPanelStyles from "./DataPanel.module.css";
 
 export function CategoriesPanel({
-  tasksDataframe,
+  categories,
   onSelect,
 }: {
-  tasksDataframe: DataFrame;
+  categories: string[];
   onSelect: (category: string) => void;
 }) {
   return (
@@ -17,7 +16,7 @@ export function CategoriesPanel({
         allowMultiple={false}
         autoSelect={true}
       >
-        {["executive_function", "testing"].map((x) => (
+        {categories.map((x) => (
           <div key={x} id={x}>
             {x}
           </div>

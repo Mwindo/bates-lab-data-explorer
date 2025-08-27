@@ -4,8 +4,8 @@ doorOpeningChildPres,"Was another child present? 0=no, 1=yes, 888=N/A, 999=missi
 doorOpeningDelayOfFirstTrial,"Was there a delay on the first trial? 0=no, 1=yes, 888=N/A, 999=missing","30,36,42,54",numeric
 doorOpeningForcedTrials,"Number of forced trials. 888=N/A, 999=missing","30,36,42,54",numeric
 doorOpeningDoorsOpened,"Number of doors opened (not forced trials). 888=N/A, 999=missing","30,36,42,54",numeric
-doorOpeningDelaysAfterReward,"Number of delays after a reward. 888=N/A, 999=missing","30,36,42,54",
-doorOpeningDelaysAfterPunishment,"Number of delays after a punishment. 888=N/A, 999=missing","30,36,42,54",
-doorOpeningComposite,Mean of doorsOpenedZ and forcedTrialsRZ,"30,36,42,54",
-doorOpeningRewardSensitivity,"doorsOpened - 12 or if <12 = 0 because 8 or 12 doors opened is optimal , looking at positive deviations from 12","30,36,42,54",
-doorOpeningPunishmentSensitivity,"Negative deviations from 8, excluding children who quit before receiving a punishment (in trial 5). Computed 0 is > 8, N/A if < 5, and as 8 minus doorsOpened otherwise.","30,36,42,54",
+doorOpeningDelaysAfterReward,"Number of delays after a reward. 888=N/A, 999=missing","30,36,42,54",numeric
+doorOpeningDelaysAfterPunishment,"Number of delays after a punishment. 888=N/A, 999=missing","30,36,42,54",numeric
+doorOpeningComposite,"Mean of doorsOpenedZ and forcedTrialsRZ","30,36,42,54",numeric
+doorOpeningRewardSensitivity,"doorsOpened - 12 or if <12 = 0 because 8 or 12 doors opened is optimal , looking at positive deviations from 12","30,36,42,54",numeric
+doorOpeningPunishmentSensitivity,"Negative deviations from 8, excluding children who quit before receiving a punishment (in trial 5). Computed 0 is > 8, N/A if < 5, and as 8 minus doorsOpened otherwise.","30,36,42,54",numeric

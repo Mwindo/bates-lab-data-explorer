@@ -14,10 +14,18 @@ const VARIABLE_METADATA_DIRECTORY_URL = `${
 const VARIABLE_METADATA_CSV_FILES = [
   "all_tasks.csv",
   "bird_alligator.csv",
+  "broken_toy.csv",
+  "child_compliance.csv",
+  "child_negative_affect.csv",
+  "child_positive_affect.csv",
+  "compliments.csv",
+  "concerns_and_constraints.csv",
   "door_opening.csv",
+  "follow_the_path.csv",
   "fruit_stroop.csv",
   "gift_delay.csv",
   "grass_snow.csv",
+  "parent_positive_affect.csv",
   "snack_delay.csv",
   "sustained_attention.csv",
 ];

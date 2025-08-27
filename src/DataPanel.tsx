@@ -35,7 +35,7 @@ export function DataPanel({
     <div style={{ display: "flex", gap: "1rem", overflow: "scroll" }}>
       <div>
         <CategoriesPanel
-          tasksDataframe={tasksData}
+          categories={[...new Set(tasksData.values.map((x) => x[1]))]}
           onSelect={setSelectedCategory}
         />
       </div>

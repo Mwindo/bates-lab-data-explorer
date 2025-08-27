@@ -1,0 +1,7 @@
+variable_name,variable_description,months,variable_type
+followThePathChildPres,"Follow the Path - Other Child Present?; 0=no, 1=yes","30,36,42,54",numeric
+followThePathParentPres,"followThePathParentPres; 0=no, 1=yes","30,36,42,54",numeric
+followThePathSlowMinusFast,"Time difference between slow & fast trials; Subtract dog avg speed from turtle avg speed 
+(followThePathTurtle – followThePathDog)
+","30,36,42,54",
+followThePathRatioFastOverSlow,Ratio of time between fast & slow trials; Divide fast trials by slow trials (followThePathDog / followThePathTurtle),"30,36,42,54",

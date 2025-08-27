@@ -1,0 +1,7 @@
+variable_name,variable_description,months,variable_type
+brokenToyChildPresent,"Broken Toy - Other Child Present? 0=no, 1=yes","30,36,42,54",numeric
+brokenToyParentPresent,"Broken Toy - Parent Present? 0=no, 1=yes","30,36,42,54",numeric
+brokenToyDistress,"Broken Toy - Child Distress (immediately after the toy breaking) 1=No distress or shows positive affect, 2=slight attention or slight concern, 3=strong facial concern, 4=distressed vocalization, 5=high distress","30,36,42,54",numeric
+brokenToyComprehension,"Broken Toy - Comprehension of another's distress (distress occurring after E says 'uh oh!' and 'what happened?') 1=No distress or shows positive affect, 2=slight attention or slight concern, 3=strong facial concern, 4=distressed vocalization, 5=high distress","30,36,42,54",numeric
+brokenToyProsocial,"Broken Toy - Prosocial Behavior (solutions offered to fix the broken toy) 1=No solution offered, 2 = 'you can fix it', 3=attempts to fix it his/herself, 4='we can fix it', 5='I can fix it'","30,36,42,54",numeric
+brokenToyAveDistress,"Mean of distress and comprehension","30,36,42,54",numeric

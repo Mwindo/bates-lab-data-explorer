@@ -1,23 +1,23 @@
-task,category,task_description,,
-bird_alligator,executive_function,"Bird-alligator is an inhibitory control measure in which children are asked to follow the directions delivered by a bird puppet (go trials) and not follow the directions delivered by an alligator puppet (no-go trials). For the youngest children, there are twelve test trials. Older children have the same initial twelve test trials followed by another twelve trials with a rule switch (do what the alligator says). All children are given enough practice go and no-go trials to correctly respond to each type of command multiple times, indicating they understand the rules. Coded behaviors for each trial (go and no-go)are as follows: No movement: child does not move in response to puppet’s command. Wrong movement: child performs a movement that was not commanded by the puppet. Partial movement: child starts to perform the commanded movement and then stops and does not finish the movement. Full movement: child fully performs the commanded movement. Each trial is also coded based on whether the child’s response was delayed by at least two seconds. Trials are not codeable if the child is not actively playing, if the experimenter shows the child how to do an action and the child repeats it (imitation), or if the child is physically restrained from performing actions or is physically helped to perform the action",,
-grass_snow,executive_function,"Grass/snow is an inhibitory control measure. A game mat is placed in front of the child: it has a green square in one corner, a white square in the other corner, and mittens in the center, meant for the child to place their hands in between trials. After asking the child what colors grass and snow are, the experimenter instructs the child to point to the green square after she says ‘snow’ and point to the white square after she says ‘grass.’ After the child successfully completes one practice trial for each condition, the experimenter delivers 14 codeable trials.
+task,category,task_description
+bird_alligator,executive_function,"Bird-alligator is an inhibitory control measure in which children are asked to follow the directions delivered by a bird puppet (go trials) and not follow the directions delivered by an alligator puppet (no-go trials). For the youngest children, there are twelve test trials. Older children have the same initial twelve test trials followed by another twelve trials with a rule switch (do what the alligator says). All children are given enough practice go and no-go trials to correctly respond to each type of command multiple times, indicating they understand the rules. Coded behaviors for each trial (go and no-go)are as follows: No movement: child does not move in response to puppet's command. Wrong movement: child performs a movement that was not commanded by the puppet. Partial movement: child starts to perform the commanded movement and then stops and does not finish the movement. Full movement: child fully performs the commanded movement. Each trial is also coded based on whether the child's response was delayed by at least two seconds. Trials are not codeable if the child is not actively playing, if the experimenter shows the child how to do an action and the child repeats it (imitation), or if the child is physically restrained from performing actions or is physically helped to perform the action"
+grass_snow,executive_function,"Grass/snow is an inhibitory control measure. A game mat is placed in front of the child: it has a green square in one corner, a white square in the other corner, and mittens in the center, meant for the child to place their hands in between trials. After asking the child what colors grass and snow are, the experimenter instructs the child to point to the green square after she says 'snow' and point to the white square after she says 'grass.' After the child successfully completes one practice trial for each condition, the experimenter delivers 14 codeable trials.
  
- Each trial is coded for correctness, based on the child’s response.
+ Each trial is coded for correctness, based on the child's response.
  
  1: correct response.
  0: incorrect response.
- The trial is uncodeable if the coder cannot see the child and/or the mat, or if the child isn’t participating in the game.",,
+ The trial is uncodeable if the coder cannot see the child and/or the mat, or if the child isn't participating in the game."
 gift_delay,executive_function,"Gift delay is a regulation to reward measure in which the experimenter presents a gift bag to the child, but then leaves the room to look for a bow for the gift, asking the child to wait to open the gift until she returns: no touching, and no peeking. The gift bag placed on the table in front of the child. The task starts when the door closes as the experimenter leaves the room, and continues for 3 minutes or until the child pulls the gift out of the bag. Coding for this task was completed using the video annotation program ELAN.
  
- Gift delay is coded along tiers which are not mutually exclusive - any amount of behaviors can be coded simultaneously, with the exception of ‘no view.’ Coded behaviors are as follows:
+ Gift delay is coded along tiers which are not mutually exclusive - any amount of behaviors can be coded simultaneously, with the exception of 'no view.' Coded behaviors are as follows:
  
- On seat: the child is considered ‘on seat’ as long as any part of their body is touching their chair (but not if they are solely touching the chair by playing with their name tag on the back of their chair).
+ On seat: the child is considered 'on seat' as long as any part of their body is touching their chair (but not if they are solely touching the chair by playing with their name tag on the back of their chair).
  Eyes on: the child is looking at the gift (or at the tissue paper that they have pulled out of the bag and are handling).
- Touching: any part of the child’s body is intentionally in contact with the bag. (If the child pokes or taps the gift for 10 seconds with spaces of less than half a second between touches, one 10-second annotation is made for touching.)
+ Touching: any part of the child's body is intentionally in contact with the bag. (If the child pokes or taps the gift for 10 seconds with spaces of less than half a second between touches, one 10-second annotation is made for touching.)
  Opening bag/peeking in: the child is gazing into the interior of the bag or pulling the bag open with the intention of seeing the gift.
  Putting hand in the bag: the child puts their hand(s) in the bag or touches/handles the tissue paper inside of the bag, but not the gift.
- Pulling gift from bag: coded when the gift is made visible to the coder as a result of the child’s actions.
- No view: coded when the child is not visible to the coder. No other behaviors can be coded while ‘no view’ is being coded.",,
+ Pulling gift from bag: coded when the gift is made visible to the coder as a result of the child's actions.
+ No view: coded when the child is not visible to the coder. No other behaviors can be coded while 'no view' is being coded."
 fruit_stroop,executive_function,"Fruit stroop is an inhibitory control measure in which the experimenter shows the child both small and large cartoon pictures of three fruits. The child is then asked to identify pictures of the small fruits within pictures of the larger ones. Then the child is asked to identify pictures of the large fruits (while ignoring the small fruits inside of them) for a total of 6 codeable trials.
 
 The potential behavioral codes for each trial are as follows:
@@ -25,41 +25,94 @@ The potential behavioral codes for each trial are as follows:
 2: child points to the correct picture.
 1: child points to the wrong picture but then correctly changes response during the same turn.
 0: child points to the wrong picture with no self-correction.
-Uncodeable: the trial wasn’t presented, or the child doesn’t participate; talking to the experimenter or attending to other things.",,
+Uncodeable: the trial wasn't presented, or the child doesn't participate; talking to the experimenter or attending to other things."
 snack_delay,executive_function,"Snack delay is a regulation to reward measure in which the child is asked to wait to eat a piece of candy until the experimenter rings a bell, which is demonstrated by the experimenter. The child is told to keep their hands on a mat while waiting. There are four trials of 10s, 20s, 30s, and 15s wait times, in that order. The experimenter lifts the bell half-way through each trial, and rings the bell at the end of each trial.
 
-There are two parts per trial: Part 1 - time from start of trial until experimenter lifts the bell, and Part 2 - time from experimenter lifting the bell until experimenter rings the bell. The child’s behaviors are coded during each of the two parts of each trial.
+There are two parts per trial: Part 1 - time from start of trial until experimenter lifts the bell, and Part 2 - time from experimenter lifting the bell until experimenter rings the bell. The child's behaviors are coded during each of the two parts of each trial.
 
-Coded behaviors include: child eats snack, child touches snack, child touches cup and/or bell, child waits until bell is lifted, child waits until bell is rung, and child keeps hands on mat. The child receives bonus points if they kept their hands on the mat throughout entire parts of trials or entire trials.",,
+Coded behaviors include: child eats snack, child touches snack, child touches cup and/or bell, child waits until bell is lifted, child waits until bell is rung, and child keeps hands on mat. The child receives bonus points if they kept their hands on the mat throughout entire parts of trials or entire trials."
 sustained_attention,executive_function,"Sustained attention is an attentional control measure that lasts for 5 minutes during a free play task, starting after the child is told to play with the toys. The child enters the room to a table full of toys. The child is instructed to stay at the table and play with the toys in front of them while the experimenter works on something in the same room. The experimenter reads through some papers on the couch in front of the child while ignoring the child completely. Coding for this task was completed using the video annotation program ELAN. All behaviors were only coded if they occurred for at least 0.5 seconds.
 
-Sustained attention is coded along tiers which are not mutually exclusive, with the exception of ‘no view.’ Coded behaviors are as follows (defined by Ruff & Capozzoli, 1995):
+Sustained attention is coded along tiers which are not mutually exclusive, with the exception of 'no view.' Coded behaviors are as follows (defined by Ruff & Capozzoli, 1995):
 
-Eyes on (casual attention): the child is looking at the toys, but not fully engaging with them. Breaks in ‘eyes on’ must be at least 0.5 seconds to be coded.
-Settled attention: a pause in the child’s causal attention to look at and physically manipulate a particular toy or a set of toys within a singular play episode. ‘Settled’ is when the child is both looking at and touching the same toy, or bringing new toys in to the same play episode.
-Focused attention: concentrated attention that involves ‘an intent facial expression, minimal extraneous bodily activity, a posture that encloses the object of interest and brings it closer to eyes, and either no talking or soft talking (relevant to the toys the child is playing with).’ ‘Focused attention’ refers to a state in which attention is directed more or less exclusively to one target or task and not divided or shared between targets or tasks. The assumptions are that, during focused visual attention, selectivity becomes narrower and restricted to fewer elements. The degree of effort or energy directed at the target tasks is increased.
-No view: the purpose of ‘no view’ is to account for portions of the video during which the child may be doing a code-able behavior (e.g., looking at the toys) but we cannot tell because of the camera angle.",,
-door_opening,executive_function,"Door opening is a regulation to reward measure in which a toy square and triangle are used to give candy (reward) or take away candy (punishment) each time they ‘visit’ after knocking on a small door. First, a research assistant models how to play the game, and wins some candy. After each door knock, the child is asked if they ‘want to keep playing or stop playing.’ The trials proceed with 4 consecutive rewards, 1 punishment, 3 consecutive rewards, 2 consecutive punishments, etc., so that if the child plays all trials they are only left with one piece of candy before the experimenter ends the game.
+Eyes on (casual attention): the child is looking at the toys, but not fully engaging with them. Breaks in 'eyes on' must be at least 0.5 seconds to be coded.
+Settled attention: a pause in the child's causal attention to look at and physically manipulate a particular toy or a set of toys within a singular play episode. 'Settled' is when the child is both looking at and touching the same toy, or bringing new toys in to the same play episode.
+Focused attention: concentrated attention that involves 'an intent facial expression, minimal extraneous bodily activity, a posture that encloses the object of interest and brings it closer to eyes, and either no talking or soft talking (relevant to the toys the child is playing with).' 'Focused attention' refers to a state in which attention is directed more or less exclusively to one target or task and not divided or shared between targets or tasks. The assumptions are that, during focused visual attention, selectivity becomes narrower and restricted to fewer elements. The degree of effort or energy directed at the target tasks is increased.
+No view: the purpose of 'no view' is to account for portions of the video during which the child may be doing a code-able behavior (e.g., looking at the toys) but we cannot tell because of the camera angle."
+door_opening,executive_function,"Door opening is a regulation to reward measure in which a toy square and triangle are used to give candy (reward) or take away candy (punishment) each time they 'visit' after knocking on a small door. First, a research assistant models how to play the game, and wins some candy. After each door knock, the child is asked if they 'want to keep playing or stop playing.' The trials proceed with 4 consecutive rewards, 1 punishment, 3 consecutive rewards, 2 consecutive punishments, etc., so that if the child plays all trials they are only left with one piece of candy before the experimenter ends the game.
 
 Each trial is only coded if the child chooses to play.
 
-An ‘intentional delay’ is coded if the child intentionally pauses for at least 2 seconds before deciding to open the door. If the child is attending to something else or talking to the experimenter etc., this does not count.
+An 'intentional delay' is coded if the child intentionally pauses for at least 2 seconds before deciding to open the door. If the child is attending to something else or talking to the experimenter etc., this does not count.
 
-A ‘forced trial’ is coded if the experimenter opens the door against the child’s decision to not open it, or the child’s silence or lack of response. If the child chooses to stop playing within the first 3 trials, the experimenter will force them to play. Starting with the 4th trial, the experimenter will stop playing if the child says they want to stop.
+A 'forced trial' is coded if the experimenter opens the door against the child's decision to not open it, or the child's silence or lack of response. If the child chooses to stop playing within the first 3 trials, the experimenter will force them to play. Starting with the 4th trial, the experimenter will stop playing if the child says they want to stop.
 
-The total number of forced trials, total number of doors opened (not forced trials), total number of delays after a reward, and total number of delays after a punishment are recorded.",,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+The total number of forced trials, total number of doors opened (not forced trials), total number of delays after a reward, and total number of delays after a punishment are recorded."
+broken_toy,executive_function,"Broken toy is an emotion regulation measure in which the child is given a toy that the experimenter explains is her favorite. When the experimenter gives the child the toy, the toy falls apart and the experimenter says several verbal cues in succession: 'Uh oh!' 'What happened?' and 'That was my favorite toy...' all while feigning 'sad' affect. The task ends when the experimenter suggests how to fix the toy and offers help to the child. The task is coded for three constructs on scales from 1 to 5.
+
+The three constructs are as follows:
+
+Child's distress: the level of distress exhibited by the child immediately following the toy breaking.
+Comprehension of another's distress: the level of distress exhibited by the child after the experimenter says 'uh oh!' and 'What happened?'
+The scale for the first two constructs is as follows: 1) No distress, or shows positive affect 2) Slight attention or slight concern (e.g. brow furrowing) 3) Strong facial concern (e.g. frowning, surprised/shocked face) 4) Distressed vocalization (e.g. 'Oh no! I broke it!') 5) High distress (e.g. crying)
+
+Prosocial behavior: the most prosocial solution offered by the child to fix the broken toy, whenever it occurs.
+The scale for the third construct is as follows: 1) No solution offered 2) 'You can fix it' (someone other than the child, like the experimenter) 3) The child attempts to fix the toy 4) 'We can fix it' (verbal solution including child and experimenter) 5) 'I can fix it' (verbal solution including the child)"
+compliments,TBD,"This emotion regulation measure occurs when the experimenter sits, with the child standing, in front of a mirror. The experimenter looks at the child in the mirror, points at them, and gives the child various compliments for one minute. The experimenter smiles and speaks in a warm tone while giving the compliments.
+
+This task is coded for three separate constructs: Embarrassment, Shame, and Pride.
+
+Embarrassment (All 3 of the following behaviors must be present):
+
+Smiling facial expression
+Gaze aversion
+Nervous touching of the hands to the body or face, nervous wriggling of the whole body, or general fidgeting.
+Shame (3 of 5 behaviors must be present):
+
+Body collapsed: child is hunched with their shoulders towards the front of their body, or their back/spine is curved or arched forward. Squatting down or bouncing on the ground does not count.
+Corners of mouth turned downward/lower lip tucked between teeth
+Eyes lowered with gaze downward or to side
+Negative vocal self-evaluation
+Withdrawal from task situation: the child is turned 90 degrees or more from the mirror or completely walks away from the task.
+Pride (3 of 5 behaviors must be present):
+
+Erect posture
+Smiling
+Direct eye contact with experimenter
+Pointing at what was complimented/applauding, may try to expatiate on what was complimented
+Positive vocal self-evaluation"
+child_positive_affect,TBD,"Child positive affect is coded for all parent-child interaction tasks: Free Play, Phone Call, Toy Cleanup, and Toy Prohibition (when the child is left alone). Each task lasts a maximum of five minutes and is coded in 15-second intervals for the following behaviors:
+
+No positive: there are no clear signs of positive affect, though mood may be pleasant. Child is generally neutral in facial expression.
+Low positive: small smiles, light laughter - an obvious increase from the neutral baseline, but no clear 'full blown joy' is present.
+High positive: smiling broadly with cheeks raised high, eyes are crinkled, hearty laughter, or otherwise extreme positivity or excitement.
+Uncodeable: The child's face or expression is not visible for at least half the interval, or the child's emotional state cannot be heard (e.g. laughter)."
+child_negative_affect,TBD,"Child negative affect is coded for all parent-child interaction tasks: Free Play, Phone Call, Toy Cleanup, and Toy Prohibition (when the child is left alone). Each task lasts a maximum of five minutes and is coded in 15-second intervals for the following behaviors:
+
+No negative affect: there is no sign of verbal or physical distress present in the child.
+Negative affect: child shows some signs of irritation, boredom, or apprehension (e.g. whining).
+High negative affect: child shows clear signs of distress. The child is extremely uncomfortable (e.g. crying, screaming).
+Uncodeable: The child's face or expression is not visible for at least half the interval, or the child's emotional state cannot be heard (e.g. crying)."
+follow_the_path,TBD,"Follow the path is a motor inhibition measure in which the child is shown a curvy, 5-ft. path and told to move a toy to a house at the end of the path ('take the [toy] home') while staying on the path the whole time. The child does two consecutive trials with each of 3 toys: a boy or girl, a dog, and a turtle, for a total of 6 codeable trials. The child is instructed to 'take the dog home really fast' and 'take the turtle home really slow.' First, the experimenter demonstrates the task to the child while explaining: 'Look how he/she stays on the path the whole time. She doesn't pick the flowers and she doesn't swim in the pond, she stays on the path the whole way home.' The experimenter repeats the rules before each trial, and says 'Ready? Go.'
+
+There are two coding components to this task: the time it takes for each toy to reach the end of the path, and motor control: how well the child follows the path outline. The trial begins when the child first begins to move the figure and ends when the figure reaches the end of the path. Motor control is coded for each of the path's 7 curves using the following point system per curve:
+
+2 points: the child keeps the majority of the figurine on the black path, within the borders, during the entire curve.
+1 point: the figurine follows the general curve, but goes outside the border at any time or makes the figurine jump along the path.
+0 points: the child completely ignores this particular curve."
+child_compliance,TBD,"Child compliance is a measure coded during the parent-child interaction task of Toy Cleanup. Once the parent signals to the child that it is time to clean up the toys, the task runs for five minutes or until the child finishes cleaning and the parent signals that the task is complete. This measure is coded for the child's level of compliance to the cleanup task.
+
+In each 15-second interval, the most noncompliant behavior occurring during the interval is coded:
+
+Defiance: overt rejection of parental agenda. Resists with defiance, anger, temper tantrums, or whining.
+Refusal/Negotiation: overt resistance to parental agenda. Overtly refuses to clean and/or negotiates with the parent in ways that are not aversive.
+Passive Noncompliance: reluctance to accept the parental agenda. Ignores parental directives, refuses to comply, or appears to be stalling. Shows no overt resistance to parental control.
+Situational Compliance: acceptance of the parental agenda. Willing to comply, but needs prompting. Child often stops cleanup in absence of reminders. Child responds good-naturedly and with minimal reluctance to reminders.
+Committed Compliance: full endorsement of the parental agenda. Child stays on task without reminders, has embraced the task wholeheartedly, may spontaneously repeat the rule or show commitment to the task.
+Other/Uncodeable: parent and child take a mutually agreed-upon break from the task (playing, reading a story, chatting, etc.)"
+parent_positive_affect,TBD,"Parent positive affect is coded for all parent-child interaction tasks: Free Play, Phone Call, and Toy Cleanup. Each task lasts a maximum of five minutes and is coded in 15-second intervals for the following behaviors:
+
+No positive: there are no clear signs of positive affect, though mood may be pleasant. Parent is generally neutral in facial expression.
+Low positive: small smiles, light laughter - an obvious increase from the neutral baseline, but no clear 'full blown joy' is present.
+High positive: smiling broadly with cheeks raised high, eyes are crinkled, hearty laughter, or otherwise extreme positivity or excitement.
+Uncodeable: The parent’s face or expression is not visible for at least half the interval, or the parent’s emotional state cannot be heard (e.g. laughter)."

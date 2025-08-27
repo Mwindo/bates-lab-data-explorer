@@ -1,0 +1,19 @@
+variable_name,variable_description,months,variable_type
+parentPositiveFreePlayChildPres,"Parent Positive Free Play - Other Child Present? 0=no,1=yes","30,36,42,54",numeric
+parentPositiveFreePlayPositiveAffect,Weighed summary of free play variables: parentPositiveFreePlayNoPositiveP*0 + parentPositiveFreePlayPositiveP*1 + parentPositiveFreePlayHiPositiveP*2,"30,36,42,54",,
+parentPositiveFreePlayNoPositiveP,Number of intervals with no positive affect/free play intervals,"30,36,42,54",,
+parentPositiveFreePlayPositiveP,Number of intervals with positive affect/free play intervals,"30,36,42,54",,
+parentPositiveFreePlayHiPositiveP,Number of intervals with high positive affect/free play intervals,"30,36,42,54",,
+parentPositiveFreePlayIntervals,"numeric	Parent Positive Free Play - Total Number of Intervals	0-20	888=NA,999=missing","30,36,42,54",numeric
+parentPositivePhoneCallChildPres,"Other child present (not TC)  during phone call 0=no,1=yes","30,36,42,54",numeric,
+parentPositivePhoneCallPositiveAffect,Weighed summary of phone call variables: parentPositivePhoneCallNoPositiveP*0 + parentPositivePhoneCallPositiveP*1 + parentPositivePhoneCallHiPositiveP*2,"30,36,42,54",,
+parentPositivePhoneCallNoPositiveP,Number of intervals with no positive affect/phone call intervals,"30,36,42,54",,
+parentPositivePhoneCallPositiveP,Number of intervals with positive affect/phone call intervals,"30,36,42,54",,
+parentPositivePhoneCallHiPositiveP,Number of intervals with high positive affect/phone call intervals,"30,36,42,54",,
+parentPositivePhoneCallIntervals,Number of Phone Call intervals ,"30,36,42,54",numeric,
+parentPositiveToyCleanupChildPres,"Other child present (not TC)  during toy cleanup 0=no,1=yes","30,36,42,54",numeric,
+parentPositiveToyCleanUpPositiveAffect,Weighed summary of Toy Cleanup variables: parentPositiveToyCleanUpNoPositiveP*0 + parentPositiveToyCleanUpPositiveP*1 + parentPositiveToyCleanUpHiPositiveP*2,"30,36,42,54",,
+parentPositiveToyCleanUpNoPositiveP,Number of intervals with no positive affect/toy cleanup intervals,"30,36,42,54",,
+parentPositiveToyCleanUpPositiveP,Number of intervals with positive affect/toy cleanup intervals,"30,36,42,54",,
+parentPositiveToyCleanUpHiPositiveP,Number of intervals with high positive affect/toy cleanup intervals,"30,36,42,54",,
+parentPositiveToyCleanupIntervals,Number of Toy Cleanup intervals ,"30,36,42,54",numeric,

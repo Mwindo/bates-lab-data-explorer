@@ -36,8 +36,10 @@ export function Listbox({
 
   useEffect(() => {
     if (!childArray.length) {
-      setSelection([]);
-      onSelect([]);
+      if (selectedIds.length) {
+        setSelection([]);
+        onSelect([]);
+      }
     } else if (selected) {
       setSelectedIds(selected);
     }

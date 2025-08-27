@@ -1,0 +1,5 @@
+variable_name,variable_description,months,variable_type
+concernsConstraintsProactiveParenting,Sum of proactive preventative responses,"30,36,42,54",numeric
+concernsConstraintsReactiveParenting,Sum of reactive preventative responses,"30,36,42,54",numeric
+concernsConstraintsExternalAttrib,Sum of external attribution (“think -other”) items,"30,36,42,54",numeric
+concernsConstraintsInternalAttrib,Sum of internal attribution (“think – trait or state”) items,"30,36,42,54",numeric

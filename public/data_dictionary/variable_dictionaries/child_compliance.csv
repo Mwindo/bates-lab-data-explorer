@@ -1,0 +1,10 @@
+variable_name,variable_description,months,variable_type,check
+childComplianceToyCleanUpChildPres,"Child Compliance - Other Child Present? 0=no,1=yes","30,36,42,54",numeric
+childComplianceToyCleanUpDeviation,(Defiance + RefusalOrNegotiation + PassiveNonCompliance) / (CodedIntervals - CommittedCompliance),"30,36,42,54",,
+childComplianceToyCleanUpNoncompliance,Proportion of (defiance+refusal+passive)/#coded ints,"30,36,42,54",
+childComplianceToyCleanUpDefianceP,Proportion of #defiance ints/#coded ints,"30,36,42,54",
+childComplianceToyCleanUpRefusalOrNegotiationP,Proportion of #refusal or negotiation ints/#coded ints,"30,36,42,54",
+childComplianceToyCleanUpPassiveNonComplianceP,Proportion of #passive ints/#coded ints,"30,36,42,54",
+childComplianceToyCleanUpSituationalComplianceP,Proportion of #situational compliance ints/#coded ints,"30,36,42,54",
+childComplianceToyCleanUpCommittedComplianceP,Proportion of #committed ints/#coded ints,"30,36,42,54",
+childComplianceToyCleanUpOtherP,Proportion of #other ints/#coded ints,"30,36,42,54",

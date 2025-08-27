@@ -3,12 +3,11 @@ import styles from "./Header.module.css";
 
 // This is a hack, but easy enough to update for such a small project
 const LAST_UPDATED =
-  "Last Updated: 2025 Feb 23 12:20 A.M. ET.\n\n\n Most recent updates:\n";
+  "Last Updated: 2025 August 26 10:00 P.M. ET.\n\n\n Most recent updates:\n";
 
 const UPDATES = [
-  "Variables are now filtered by the selected tasks by default",
-  'There is a "Select All" button for the tasks list',
-  'There is an "Updates" button with recent updates',
+  "Added several tasks",
+  "Fixed a rendering bug when no results are returned in the variable filter",
 ];
 
 const getFormattedUpdates = () => {

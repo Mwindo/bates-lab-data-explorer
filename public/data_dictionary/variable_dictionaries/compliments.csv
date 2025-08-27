@@ -1,0 +1,7 @@
+variable_name,variable_description,months,variable_type
+complimentsChildPresent,"Compliments - Other Child Present? 0=no, 1=yes","30,36,42,54",numeric
+complimentsParentPresent,"Compliments - Parent Present? 0=no, 1=yes","30,36,42,54",numeric
+complimentsEmbarrassment,"Compliments - Did the child show any signs of embarrassment? (all 3 behaviors present) 0=no, 1=yes","30,36,42,54",numeric
+complimentsShame,"Compliments - Did the child show any signs of shame? (3 of 5 behaviors present) 0=no, 1=yes","30,36,42,54",numeric
+complimentsPride,"Compliments - Did the child show any signs of pride? (3 of 5 behaviors present) 0=no, 1=yes","30,36,42,54",numeric
+complimentsSelfAwareness,"Mean of Embarrassment, Shame, and Pride","30,36,42,54",numeric
