@@ -25,9 +25,9 @@ export function TasksPanel({
       const result = tasksDataframe.loc({
         rows: tasksDataframe["category"].eq(category),
       });
-      return result.values.sort() as string[];
+      return result.values as string[];
     }
-    return tasksDataframe.values.sort() as unknown as string[];
+    return tasksDataframe.values as unknown as string[];
   }, [category, tasksDataframe, limitToSelectedCategory]);
 
   const selectTasks = (tasks: string[]) => {

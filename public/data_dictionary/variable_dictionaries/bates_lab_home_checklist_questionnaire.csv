@@ -1,0 +1,108 @@
+variable_name,variable_description,months,variable_type
+blhci1,"Bates Lab Home Checklist - Indoors - child's play appears safe and free of obvious hazards 0=no,1=yes","30,36,42,54",numeric
+blhci2,"Bates Lab Home Checklist - Indoors - hazardous substances located with clear reach of TC 0=no,1=yes","30,36,42,54",numeric
+blhci3,"Bates Lab Home Checklist - Indoors - sharp objects are located within reach of TC 0=no,1=yes","30,36,42,54",numeric
+blhci4,"Bates Lab Home Checklist - Indoors - lighters,matches,or lit cigarettes are loacted within clear reach of TC 0=no,1=yes","30,36,42,54",numeric
+blhci5,"Bates Lab Home Checklist - Indoors - stove was left on and unattended for more than a few minutes 0=no,1=yes","30,36,42,54",numeric
+blhci6,"Bates Lab Home Checklist - Indoors - doors and windows are/can be secured 0=no,1=yes","30,36,42,54",numeric
+blhci7,"Bates Lab Home Checklist - Indoors - mutliple electrical cords are visible and within clear reach of TC 0=no,1=yes","30,36,42,54",numeric
+blhci8,"Bates Lab Home Checklist - Indoors - house is somewhat tidy 0=no,1=yes","30,36,42,54",numeric
+blhci9,"Bates Lab Home Checklist - Indoors - at least one smoke detector is visible 0=no,1=yes","30,36,42,54",numeric
+blhci10,"Bates Lab Home Checklist - Indoors - house is uncomfortably dirty 0=no,1=yes","30,36,42,54",numeric
+blhci11,"Bates Lab Home Checklist - Indoors - basic hygiene appears to be observed by all family members 0=no,1=yes","30,36,42,54",numeric
+blhci12,"Bates Lab Home Checklist - Indoors - physical environment allows free movement 0=no,1=yes","30,36,42,54",numeric
+blhco13,"Bates Lab Home Checklist - Outdoors - play equipment seems safe 0=no,1=yes","30,36,42,54",numeric
+blhco14,"Bates Lab Home Checklist - Outdoors - pool/ hot tub is fenced in and/or covered 0=no,1=yes","30,36,42,54",numeric
+blhco15,"Bates Lab Home Checklist - Outdoors - grill was left on and unattended for more than a few minutes in presence of children 0=no,1=yes","30,36,42,54",numeric
+blhco16,"Bates Lab Home Checklist - Outdoors - street of apartment complex is well-lit  0=no,1=yes","30,36,42,54",numeric
+blhco17,"Bates Lab Home Checklist - Outdoors - a safe outside play area exists  0=no,1=yes","30,36,42,54",numeric
+blhcs20,"Bates Lab Home Checklist - Sleep Space - Overhead lights are on while TC falls asleep	0=no,1=yes	888=NA,999=missing","30,36,42,54",numeric
+blhcs21,"Bates Lab Home Checklist - Sleep Space - Music,talking,television or computer use are occuring in TC's sleep space 0=no,1=yes","30,36,42,54",numeric
+blhcs22,"Bates Lab Home Checklist - Sleep Space - Nightlight or other dime light is visible from where TC sleeps 0=no,1=yes","30,36,42,54",numeric
+blhcs23,"Bates Lab Home Checklist - Sleep Space - The sleeping space is noticeably hot 0=no,1=yes","30,36,42,54",numeric
+blhcs24,"Bates Lab Home Checklist - Sleep Space - The sleeping space is noticeably cold 0=no,1=yes","30,36,42,54",numeric
+blhcs25,"Bates Lab Home Checklist - Sleep Space - Bedding is noticeably dirty 0=no,1=yes","30,36,42,54",numeric
+blhcs26,"Bates Lab Home Checklist - Sleep Space - TC has at least one blanket (if weather calls for it) 0=no,1=yes","30,36,42,54",numeric
+blhcs27,"Bates Lab Home Checklist - Sleep Space - TC has atleast one pillow 0=no,1=yes","30,36,42,54",numeric
+blhcs28,"Bates Lab Home Checklist - Sleep Space - TC's mattress is covreed with sheets 0=no,1=yes","30,36,42,54",numeric
+blhcs29,"Bates Lab Home Checklist - Sleep Space - A stuffed animal of other toy is part of the bedtime ritual 0=no,1=yes","30,36,42,54",numeric
+blhcs30,"Bates Lab Home Checklist - Sleep Space - A blanket is part of the bedtime ritual 0=no,1=yes","30,36,42,54",numeric
+blhcs31,"Bates Lab Home Checklist - Sleep Space - TC is allowed water and/or snack as part of bedtime ritual 0=no,1=yes","30,36,42,54",numeric
+blhcs32,"Bates Lab Home Checklist - Sleep Space - A pacifier/bottle is part of bedtime ritual 0=no,1=yes","30,36,42,54",numeric
+blhcs33,"Bates Lab Home Checklist - Sleep Space - Other children share TC's sleeping space 0=no,1=yes","30,36,42,54",numeric
+blhcs34,"Bates Lab Home Checklist - Sleep Space - Adults share TC's sleeping space 0=no,1=yes","30,36,42,54",numeric
+blhcs35,"Bates Lab Home Checklist - Sleep Space - TC shares a bed wtih one or more individuals 0=no,1=yes","30,36,42,54",numeric
+blhcs36,"Bates Lab Home Checklist - Sleep Space - TC wears pajamas to bed 0=no,1=yes","30,36,42,54",numeric
+blhcs37,"Bates Lab Home Checklist - Sleep Space - TC wears a diaper / pull-ups to bed 0=no,1=yes","30,36,42,54",numeric
+blhcs38,"Bates Lab Home Checklist - Sleep Space - TC sleeps with the door to the sleeping space open 0=no,1=yes","30,36,42,54",numeric
+blhcs39,"Bates Lab Home Checklist - Sleep Space - There is a sound monitor in the TC's room,or the parents are able to hear movements 0=no,1=yes","30,36,42,54",numeric
+blhct40,"Bates Lab Home Checklist - Transition to Bedtime - Parent(s) attempt to dim lighting in the house as bedtime nears 0=no,1=yes","30,36,42,54",numeric
+blhct41,"Bates Lab Home Checklist - Transition to Bedtime - Parent(s) attempt to reduce noise levels as bedtime nears 0=no,1=yes","30,36,42,54",numeric
+blhct42,"Bates Lab Home Checklist - Transition to Bedtime - Parent(s) increase use of quiet or soothign voices as bedtime nears 0=no,1=yes","30,36,42,54",numeric
+blhct43,"Bates Lab Home Checklist - Transition to Bedtime - Parent(s) increase use of physical affection directed toward TC as bedtime nears 0=no,1=yes","30,36,42,54",numeric
+blhct44,"Bates Lab Home Checklist - Transition to Bedtime - Parent(s) verbally signal that bedtime is nearing 0=no,1=yes","30,36,42,54",numeric
+blhcp45,"Bates Lab Home Checklist - Psychological Safety - movies with adult language or content are played in TC's presence 0=no,1=yes","30,36,42,54",numeric
+blhcp46,"Bates Lab Home Checklist - Psychological Safety - music with adult language or content is played in TC's presence 0=no,1=yes","30,36,42,54",numeric
+blhcp47,"Bates Lab Home Checklist - Psychological Safety - There are age-appropriate toys and games available to the TC 0=no,1=yes","30,36,42,54",numeric
+blhcp48,"Bates Lab Home Checklist- Psychological Safety - Each child has his/her own place to keep treasures or personal things 0=no,1=yes","30,36,42,54",numeric
+blhcp49,"Bates Lab Home Checklist - Psychological Safety - At least 8-10 books are visible 0=no,1=yes","30,36,42,54",numeric
+blhcp50,"Bates Lab Home Checklist - Psychological Safety - At least 2 children's books are visible 0=no,1=yes","30,36,42,54",numeric
+blhcp51,"Bates Lab Home Checklist - Psychological Safety - family has a telephone 0=no,1=yes","30,36,42,54",numeric
+blhco1,"Bates Lab Home Checklist - Other - was mom present during observation? 0=no,1=yes","30,36,42,54",numeric
+blhco1b,"Bates Lab Home Checklist - Other - was dad present during observation? 0=no,1=yes","30,36,42,54",numeric
+blhco1c,"Bates Lab Home Checklist - Other - were other siblings present during observation? 0=no,1=yes","30,36,42,54",numeric
+blhco1d,"Bates Lab Home Checklist - Other - was there anyone else present during observation? 0=no,1=yes","30,36,42,54",numeric
+blhco1dn,"Bates Lab Home Checklist - Other - who were the other present during observation? 1=grandparent,2=aunt/uncle,3=cousin,4=adult friend,5=child friend,6=other,10=great aunt and grandparent","30,36,42,54",numeric
+blhco2,"Bates Lab Home Checklist - Other - did mom interact with child during observation? 0=no,1=yes","30,36,42,54",numeric
+blhco2b,"Bates Lab Home Checklist - Other - did dad interact with child during observation? 0=no,1=yes","30,36,42,54",numeric
+blhco2c,"Bates Lab Home Checklist - Other - did other siblings interact with child during observation? 0=no,1=yes","30,36,42,54",numeric
+blhco2d,"Bates Lab Home Checklist - Other - did anyone else interact with child during observation? 0=no,1=yes","30,36,42,54",numeric
+blhco2dn,"Bates Lab Home Checklist - Other - who else interacted with child during observation? 1=grandparent,2=aunt/uncle,3=cousin,4=adult friend,5=child friend,6=other,10=great aunt and grandparent","30,36,42,54",numeric
+blhco3,"Bates Lab Home Checklist - Other - did the observation take place in the kitchen? 0=no,1=yes","30,36,42,54",numeric
+blhco3b,"Bates Lab Home Checklist - Other - did the observation take place in the living room? 0=no,1=yes","30,36,42,54",numeric
+blhco3c,"Bates Lab Home Checklist - Other - did the observation take place in the TC's bedroom? 0=no,1=yes","30,36,42,54",numeric
+blhco3d,"Bates Lab Home Checklist - Other - did the observation take place outdoors? 0=no,1=yes","30,36,42,54",numeric
+blhco3e,"Bates Lab Home Checklist - Other - did the observation take place in the bathroom? 0=no,1=yes","30,36,42,54",numeric
+blhco3f,"Bates Lab Home Checklist - Other - did the observation take place in any other location? 0=no,1=yes","30,36,42,54",numeric
+blhcr1,"Bates Lab Home Checklist - Ratings,Impressions - Family's preperation for session 1=took them by surprise,3=adequate preparations,5=well prepared","30,36,42,54",numeric
+blhcr2,"Bates Lab Home Checklist - Ratings,Impressions - Confusion/disorganization of session 1=calm,smooth,3=average,variable,5=confusing,chaotic","30,36,42,54",numeric
+blhcr3,"Bates Lab Home Checklist - Ratings,Impressions - Family's reception of visitors 1=very uncomfortable,3=awkward moments but generally comfortable,5=open,comfortable","30,36,42,54",numeric
+blhcr4,"Bates Lab Home Checklist - Ratings,Impressions - Like this family and would enjoy spending time with 1=never want to see them,3=ok,would tolerate,5=really liked","30,36,42,54",numeric
+Col133,Empty column (most likely) ,"30,36,42,54",
+blhci1R,"Reverse score of Bates Lab Home Checklist - Indoors - child's play appears safe and free of obvious hazards 0=no,1=yes","30,36,42,54",numeric
+blhci6R,"Reverse score of Bates Lab Home Checklist - Indoors - doors and windows are/can be secured 0=no,1=yes","30,36,42,54",numeric
+blhci8R,"Reverse score of Bates Lab Home Checklist - Indoors - house is somewhat tidy 0=no,1=yes","30,36,42,54",numeric
+blhci9R,"Reverse score of Bates Lab Home Checklist - Indoors - at least one smoke detector is visible 0=no,1=yes","30,36,42,54",numeric
+blhci11R,"Reverse score of Bates Lab Home Checklist - Indoors - basic hygiene appears to be observed by all family members 0=no,1=yes","30,36,42,54",numeric
+blhci12R,"Reverse score of Bates Lab Home Checklist - Indoors - physical environment allows free movement 0=no,1=yes","30,36,42,54",numeric
+blhco13R,"Reverse score of Bates Lab Home Checklist - Outdoors - play equipment seems safe 0=no,1=yes","30,36,42,54",numeric
+blhco14R,"Reverse score of Bates Lab Home Checklist - Outdoors - pool/ hot tub is fenced in and/or covered 0=no,1=yes","30,36,42,54",numeric
+blhco16R,"Reverse score of Bates Lab Home Checklist - Outdoors - street of apartment complex is well-lit 0=no,1=yes","30,36,42,54",numeric
+blhco17R,"Reverse score of Bates Lab Home Checklist - Outdoors - a safe outside play area exists 0=no,1=yes","30,36,42,54",numeric
+blhcs22R,"Reverse score of Bates Lab Home Checklist - Sleep Space - Nightlight or other dime light is visible from where TC sleeps 0=no,1=yes","30,36,42,54",numeric
+blhcs26R,"Reverse score of Bates Lab Home Checklist - Sleep Space - TC has at least one blanket (if weather calls for it) 0=no,1=yes","30,36,42,54",numeric
+blhcs27R,"Reverse score of Bates Lab Home Checklist - Sleep Space - TC has at least one pillow 0=no,1=yes","30,36,42,54",numeric
+blhcs28R,"Reverse score of Bates Lab Home Checklist - Sleep Space - TC's mattress is covered with sheets 0=no,1=yes","30,36,42,54",numeric
+blhcs29R,"Reverse score of Bates Lab Home Checklist - Sleep Space - A stuffed animal of other toy is part of the bedtime ritual 0=no,1=yes","30,36,42,54",numeric
+blhcs30R,"Reverse score of Bates Lab Home Checklist - Sleep Space - A blanket is part of the bedtime ritual 0=no,1=yes","30,36,42,54",numeric
+blhcs31R,"Reverse score of Bates Lab Home Checklist - Sleep Space - TC is allowed water and/or snack as part of bedtime ritual 0=no,1=yes","30,36,42,54",numeric
+blhcs32R,"Reverse score of Bates Lab Home Checklist - Sleep Space - A pacifier/bottle is part of bedtime ritual 0=no,1=yes","30,36,42,54",numeric
+blhcs36R,"Reverse score of Bates Lab Home Checklist - Sleep Space - TC wears pajamas to bed 0=no,1=yes","30,36,42,54",numeric
+blhcs39R,"Reverse score of Bates Lab Home Checklist - Sleep Space - There is a sound monitor in the TC's room,or the parents are able to hear movements 0=no,1=yes","30,36,42,54",numeric
+blhct40R,"Reverse score of Bates Lab Home Checklist - Transition to Bedtime - Parent(s) attempt to dim lighting in the house as bedtime nears 0=no,1=yes","30,36,42,54",numeric
+blhct41R,"Reverse score of Bates Lab Home Checklist - Transition to Bedtime - Parent(s) attempt to reduce noise levels as bedtime nears 0=no,1=yes","30,36,42,54",numeric
+blhct42R,"Reverse score of Bates Lab Home Checklist - Transition to Bedtime - Parent(s) increase use of quiet or soothing voices as bedtime nears 0=no,1=yes","30,36,42,54",numeric
+blhct43R,"Reverse score of Bates Lab Home Checklist - Transition to Bedtime - Parent(s) increase use of physical affection directed toward TC as bedtime nears 0=no,1=yes","30,36,42,54",numeric
+blhct44R,"Reverse score of Bates Lab Home Checklist - Transition to Bedtime - Parent(s) verbally signal that bedtime is nearing 0=no,1=yes","30,36,42,54",numeric
+blhcp47R,"Reverse score of Bates Lab Home Checklist - Psychological Safety - There are age-appropriate toys and games available to the TC 0=no,1=yes","30,36,42,54",numeric
+blhcp48R,"Reverse score of Bates Lab Home Checklist- Psychological Safety - Each child has his/her own place to keep treasures or personal things 0=no,1=yes","30,36,42,54",numeric
+blhcp49R,"Reverse score of Bates Lab Home Checklist - Psychological Safety - At least 8-10 books are visible 0=no,1=yes","30,36,42,54",numeric
+blhcp50R,"Reverse score of Bates Lab Home Checklist - Psychological Safety - At least 2 children's books are visible 0=no,1=yes","30,36,42,54",numeric
+blhUnsafeAndDisorgHomeSum,"Unsafe & Disorganization in the Home Sum: '1R','2','3','4','5','6R','7','8R','9R','10','11R','12R'","30,36,42,54",
+blhcHouseholdDisorgSum,"Household Disorganization Sum: '8R','10','11R','12R'","30,36,42,54",
+blhcOutdoorSum,"Outdoor Spaces Sum: '13R','14R','15','16R','17R'","30,36,42,54",
+blhcDisruptiveSleepSpaceSum,"Disruptive Sleep Space Sum: '20','21','22R','23','24','25','26R','27R','28R','29R','30R','31R','33','34','35','36R','38','39R' *Excludes items 32 and 37 because they don't indicate positve or negative qualities of the sleep space","30,36,42,54",
+blhcTransitionSum,"Transition Sum: “40R','41R','42R','43R','44R”","30,36,42,54",
+blhcInapptStimSum,"Inappropriate Stimulus Source Sum: '45','46','47R','48R','49R','50R' *Does not include item 51,short for inappropriate stimulation (no books,no age appt toys,bad language in music and movies)","30,36,42,54",
+blhcFamilyPreparation,Family Preparation blhcr1,"30,36,42,54",
+blhcHomeConfusion,Home Confusion blhcr2,"30,36,42,54",

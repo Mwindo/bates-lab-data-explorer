@@ -3,12 +3,9 @@ import styles from "./Header.module.css";
 
 // This is a hack, but easy enough to update for such a small project
 const LAST_UPDATED =
-  "Last Updated: 2025 August 26 10:00 P.M. ET.\n\n\n Most recent updates:\n";
+  "Last Updated: 2025 September 8 10:42 P.M. ET.\n\n\n Most recent updates:\n";
 
-const UPDATES = [
-  "Added several tasks",
-  "Fixed a rendering bug when no results are returned in the variable filter",
-];
+const UPDATES = ["Added questionnaires"];
 
 const getFormattedUpdates = () => {
   const text = `${LAST_UPDATED}\n${UPDATES.map((update) => `- ${update}`).join(

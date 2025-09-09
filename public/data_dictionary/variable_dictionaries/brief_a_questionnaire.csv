@@ -1,0 +1,17 @@
+variable_name,variable_description,months,variable_type
+briefInhibit,"Inhibit Items Sum","30,36,42,54",numeric
+briefShift,"Shift Items Sum","30,36,42,54",numeric
+briefEmotionalControl,"Emotional Control Items Sum","30,36,42,54",numeric
+briefSelfMonitor,"Self Monitor Items Sum","30,36,42,54",numeric
+briefInitiate,"Initiate Items Sum","30,36,42,54",numeric
+briefWorkingMemory,"Working Memory Items Sum","30,36,42,54",numeric
+briefPlanOrganize,"Plan Organize Items Sum","30,36,42,54",numeric
+briefTaskMonitor,"Task Monitor Items Sum","30,36,42,54",numeric
+briefOrganizationOfMaterials,"Organization of Materials Items Sum","30,36,42,54",numeric
+briefBehavioralRegulationIndex,"Behavioral Regulation Index Items Sum","30,36,42,54",numeric
+briefMetacognitionIndex,"Metacognition Index Items Sum","30,36,42,54",numeric
+briefGlobalExecutiveComposite,"Global Executive Composite Items Sum","30,36,42,54",numeric
+briefInconsistencyValidity,"Inconsistency validity scale based on manual","30,36,42,54",
+briefInfrequencyValidity,"Infrequence validty scale based on manual","30,36,42,54",
+briefNegativityValidity,"Negativity validity scale based on manual","30,36,42,54",
+briefIsHighlyNegative,"Negativity validity score greater than/equal to 6 = 1,else 0","30,36,42,54",

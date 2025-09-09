@@ -1,0 +1,3 @@
+variable_name,variable_description,months,variable_type
+cesdDepressiveSymptoms,"Depressive Symptoms Items Sum; 1-4 (higher values=more depressive symptoms)","30,36,42,54",numeric
+cesdDepressionDiagnosis,"Depression Diagnosis; 0= no, 1=yes","30,36,42,54",numeric

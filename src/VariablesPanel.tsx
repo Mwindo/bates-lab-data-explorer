@@ -13,9 +13,14 @@ const VARIABLE_METADATA_DIRECTORY_URL = `${
 
 const VARIABLE_METADATA_CSV_FILES = [
   "all_tasks.csv",
+  "bates_lab_home_checklist_questionnaire.csv",
   "bird_alligator.csv",
+  "brief_a_questionnaire.csv",
   "broken_toy.csv",
+  "ces_d_questionnaire.csv",
+  "chaos_questionnaire.csv",
   "child_compliance.csv",
+  "child_misbehavior_questionnaire.csv",
   "child_negative_affect.csv",
   "child_positive_affect.csv",
   "compliments.csv",
@@ -53,11 +58,17 @@ export function VariablesPanel({
   lockedVariableNames?: string[];
 }) {
   const getCategoryForTask = (task: string) => {
-    const result = (tasksDataframe.loc({
-      rows: tasksDataframe["task"].eq(task),
-      columns: ["category"],
-    }).values[0] || ["all"]) as string[];
-    return result[0];
+    const norm = (s: any) => String(s).trim().toLowerCase();
+
+    // Build a plain boolean array instead of a Series
+    const mask: boolean[] = tasksDataframe["task"].values.map(
+      (v: any) => norm(v) === norm(task)
+    );
+
+    const sub = tasksDataframe.loc({ rows: mask, columns: ["category"] });
+    if (sub.shape[0] === 0) return "all";
+
+    return sub.iloc({ rows: [0], columns: [0] }).values[0] as string;
   };
 
   const [selectedVariables, setSelectedVariables] = useState<string[]>([]);
@@ -127,13 +138,19 @@ export function VariablesPanel({
           .readCSV(`${VARIABLE_METADATA_DIRECTORY_URL}/${filename}`)
           .then((df) => {
             // Create a new column filled with the CSV path
+            console.log(filename);
             const taskName = filename.slice(0, -4);
+            console.log("-task", taskName);
             const taskColumn = new Array(df.shape[0]).fill(taskName);
             const categoryColumn = new Array(df.shape[0]).fill(
               getCategoryForTask(taskName)
             );
+            console.log("-category", getCategoryForTask(taskName));
+            console.log("-df1", df);
             df = df.addColumn("task", taskColumn); // mutate df by adding "task" column
+            console.log("-df2", df);
             df = df.addColumn("category", categoryColumn);
+            console.log("-df3", df);
             df = explodeByMonths(df);
             return df;
           })
@@ -141,6 +158,7 @@ export function VariablesPanel({
     )
       .then((dataFrames) => {
         // Merge all the DataFrames
+        console.log("dataFrames", dataFrames);
         const mergedDF = dfd.concat({
           dfList: dataFrames,
           axis: 0,
