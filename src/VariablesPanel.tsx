@@ -189,7 +189,8 @@ export function VariablesPanel({
         fileName: "data.csv",
         download: true,
       });
-    } catch {
+    } catch (e) {
+      console.log(e);
       alert(
         "There was an error saving the CSV. Are you sure you loaded the correct file? Refresh and try again.",
       );
