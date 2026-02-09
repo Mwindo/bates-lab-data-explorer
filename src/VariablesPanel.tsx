@@ -182,15 +182,22 @@ export function VariablesPanel({
         columns: variablesInQueue,
       });
 
-      // Replace "NA" with blank
-      filteredDf.replace("NA", "", { inplace: true });
+      // Blank out "NA" by transforming the underlying values
+      const newValues = filteredDf.values.map((row) =>
+        row.map((v) => (v === "NA" ? "" : v)),
+      );
 
-      dfd.toCSV(filteredDf, {
+      const cleanedDf = new dfd.DataFrame(newValues, {
+        columns: filteredDf.columns,
+        index: filteredDf.index,
+      });
+
+      dfd.toCSV(cleanedDf, {
         fileName: "data.csv",
         download: true,
       });
     } catch (e) {
-      console.log(e);
+      console.error(e);
       alert(
         "There was an error saving the CSV. Are you sure you loaded the correct file? Refresh and try again.",
       );
