@@ -62,7 +62,7 @@ export function VariablesPanel({
 
     // Build a plain boolean array instead of a Series
     const mask: boolean[] = tasksDataframe["task"].values.map(
-      (v: any) => norm(v) === norm(task)
+      (v: any) => norm(v) === norm(task),
     );
 
     const sub = tasksDataframe.loc({ rows: mask, columns: ["category"] });
@@ -73,7 +73,7 @@ export function VariablesPanel({
 
   const [selectedVariables, setSelectedVariables] = useState<string[]>([]);
   const [variablesInQueue, setVariablesInQueue] = useState<string[]>(
-    lockedVariableNames || []
+    lockedVariableNames || [],
   );
   const [selectedVariablesInQueue, setSelectedVariablesInQueue] = useState<
     string[]
@@ -81,7 +81,7 @@ export function VariablesPanel({
   const [filterString, setFilterString] = useState<string>("");
 
   const [variablesMetadata, setVariablesMetadata] = useState<DataFrame | null>(
-    null
+    null,
   );
 
   const [loadingMessage, setLoadingMessage] = useState<string>("");
@@ -90,7 +90,7 @@ export function VariablesPanel({
     if (tasks && tasks.length) {
       const result = variablesMetadata.loc({
         rows: variablesMetadata["task"].values.map((x) =>
-          [...tasks, "all_tasks"].includes(x)
+          [...tasks, "all_tasks"].includes(x),
         ),
         columns: ["variable_name"],
       });
@@ -143,7 +143,7 @@ export function VariablesPanel({
             console.log("-task", taskName);
             const taskColumn = new Array(df.shape[0]).fill(taskName);
             const categoryColumn = new Array(df.shape[0]).fill(
-              getCategoryForTask(taskName)
+              getCategoryForTask(taskName),
             );
             console.log("-category", getCategoryForTask(taskName));
             console.log("-df1", df);
@@ -153,8 +153,8 @@ export function VariablesPanel({
             console.log("-df3", df);
             df = explodeByMonths(df);
             return df;
-          })
-      )
+          }),
+      ),
     )
       .then((dataFrames) => {
         // Merge all the DataFrames
@@ -174,22 +174,27 @@ export function VariablesPanel({
 
   const saveAsCSV = async () => {
     setLoadingMessage("Gathering data. This could take several seconds.");
-    // Create a new DataFrame that only includes the columns in selectedVariablesInQueue
+
     try {
       const variablesDataframe = await dfd.readCSV(variablesDataframeFile);
+
       const filteredDf = variablesDataframe.loc({
         columns: variablesInQueue,
       });
-      // Trigger a CSV download using the filtered DataFrame
+
+      // Replace "NA" with blank
+      filteredDf.replace("NA", "", { inplace: true });
+
       dfd.toCSV(filteredDf, {
         fileName: "data.csv",
         download: true,
       });
     } catch {
       alert(
-        "There was an error saving the CSV. Are you sure you loaded the correct file? Refresh and try again."
+        "There was an error saving the CSV. Are you sure you loaded the correct file? Refresh and try again.",
       );
     }
+
     setLoadingMessage("");
   };
 
@@ -212,7 +217,7 @@ export function VariablesPanel({
         <Listbox label="Variables" onSelect={setSelectedVariables}>
           {getVariables()
             .filter((x) =>
-              `${x}`.toLowerCase().includes(filterString.toLowerCase())
+              `${x}`.toLowerCase().includes(filterString.toLowerCase()),
             )
             .map((x) => (
               <SelectableVariableItem
@@ -252,9 +257,9 @@ export function VariablesPanel({
                 ...new Set(
                   variablesInQueue.concat(
                     getVariables().filter((x) =>
-                      `${x}`.toLowerCase().includes(filterString.toLowerCase())
-                    )
-                  )
+                      `${x}`.toLowerCase().includes(filterString.toLowerCase()),
+                    ),
+                  ),
                 ),
               ])
             }
@@ -285,7 +290,7 @@ export function VariablesPanel({
               onRemove={(id) => {
                 setVariablesInQueue(variablesInQueue.filter((x) => x != id));
                 setSelectedVariablesInQueue(
-                  selectedVariablesInQueue.filter((s) => s !== `${x}`)
+                  selectedVariablesInQueue.filter((s) => s !== `${x}`),
                 );
               }}
             ></SelectedVariableItem>
@@ -302,8 +307,8 @@ export function VariablesPanel({
                 variablesInQueue.filter(
                   (x) =>
                     !selectedVariablesInQueue.includes(x) ||
-                    lockedVariableNames?.includes(x)
-                )
+                    lockedVariableNames?.includes(x),
+                ),
               );
               setSelectedVariablesInQueue([]);
             }}
@@ -311,7 +316,7 @@ export function VariablesPanel({
               selectedVariablesInQueue.length === 0 ||
               areSetsEqual(
                 new Set(selectedVariablesInQueue),
-                new Set(lockedVariableNames)
+                new Set(lockedVariableNames),
               )
             }
           >
